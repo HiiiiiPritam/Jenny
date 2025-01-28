@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Message } from "../components/ChatBox";
+import { speak } from "../utils/tts";
 
 const useChatAPI = () => {
   const [messages, setMessages] = useState<Message[]>([]);
 
+
   const sendMessage = async (userMessage: string): Promise<void> => {
-    // Add the user's message to the chat
     const updatedMessages: Message[] = [
       ...messages,
       { sender: "user", text: userMessage },
@@ -34,6 +35,9 @@ const useChatAPI = () => {
       }
 
       const reply = response.text() || "No response received.";
+      if(reply!=""&& reply !== "No response received."){
+        speak(reply);
+      }
       console.log("Bot reply:", reply);
       setMessages((prev) => [...prev, { sender: "bot", text: reply }]);
     } catch (error) {
