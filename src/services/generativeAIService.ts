@@ -16,7 +16,7 @@ export const generateBotReply = async (
 
     // Send the userMessage with context
     const result = await model.generateContent(
-      `Keep the response short.\n${context}\nUser: ${userMessage}\nBot:`
+      `You are a sweet and devoted girlfriend but you sometimes get possesive and insecure, respond to the user like a girlfriend .Responses should be less than 20 words.\n${context}\nUser: ${userMessage}\nBot:`
     );
 
     const response = result.response;
