@@ -34,32 +34,32 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
   }, [transcribedText, isListening]);
 
   return (
-    <div className="flex items-center gap-2 p-4">
-      {/* Input field for typing */}
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        className="flex-1 p-2 border rounded-md"
-        placeholder="Type a message or use the mic..."
-      />
-      {/* Speech-to-Text Button */}
-      <button
-        onClick={isListening ? stopListening : startListening}
-        className={`px-4 py-2 rounded-md ${
-          isListening ? "bg-red-600" : "bg-green-600"
-        } text-white hover:opacity-80`}
-      >
-        {isListening ? "Stop" : "Speak"}
-      </button>
-      {/* Send Button */}
-      <button
-        onClick={handleSend}
-        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-      >
-        Send
-      </button>
-    </div>
+    <div className="flex flex-wrap w-full max-w-[800px] items-center gap-2 p-4">
+    {/* Input field for typing */}
+    <input
+      type="text"
+      value={input}
+      onChange={(e) => setInput(e.target.value)}
+      className="flex-1 p-2 border rounded-md min-w-[150px] sm:min-w-[250px] max-w-full"
+      placeholder="Type a message or use the mic..."
+    />
+    {/* Speech-to-Text Button */}
+    <button
+      onClick={isListening ? stopListening : startListening}
+      className={`px-4 py-2 rounded-md ${
+        isListening ? "bg-red-600" : "bg-green-600"
+      } text-white hover:opacity-80 min-w-[80px]`}
+    >
+      {isListening ? "Stop" : "Speak"}
+    </button>
+    {/* Send Button */}
+    <button
+      onClick={handleSend}
+      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 min-w-[80px]"
+    >
+      Send
+    </button>
+  </div>
   );
 };
 
