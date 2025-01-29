@@ -8,11 +8,12 @@ export interface Message {
 
 interface ChatBoxProps {
   messages: Message[];
+  chatContainerRef: React.RefObject<HTMLDivElement>;
 }
 
-const ChatBox: React.FC<ChatBoxProps> = ({ messages }: ChatBoxProps) => {
+const ChatBox: React.FC<ChatBoxProps> = ({ messages, chatContainerRef }: ChatBoxProps) => {
   return (
-    <div className="flex flex-col gap-4 p-4 bg-gray-100 h-[80vh] overflow-y-auto rounded-md">
+    <div ref={chatContainerRef} className="flex flex-col gap-4 p-4 bg-gray-100 h-[80vh] overflow-y-auto rounded-md">
       {messages.map((msg, index) => (
         <div
           key={index}
