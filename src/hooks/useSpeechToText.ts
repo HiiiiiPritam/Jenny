@@ -28,6 +28,7 @@ const useSpeechToText = (onStop: (transcription: string) => void) => {
       const result = event.results[0][0].transcript;
       console.log("Speech recognized here:", result);
       setTranscribedText(result); // Update state with recognized text
+      onStop(result); // Immediately pass the result to the parent
     };
 
     recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
@@ -46,7 +47,6 @@ const useSpeechToText = (onStop: (transcription: string) => void) => {
     if (isListening) {
       console.log("Stopping speech recognition...");
       setIsListening(false);
-      onStop(transcribedText);
     }
   };
 

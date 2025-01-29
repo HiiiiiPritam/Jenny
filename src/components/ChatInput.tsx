@@ -12,7 +12,9 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
   const { isListening, transcribedText, startListening, stopListening } =
     useSpeechToText((transcription) => {
       // Automatically send transcription to parent on stop
+      console.log("Transcription:", transcription);
       if (transcription.trim()) {
+        setInput(transcription); // Set input immediately
         onSend(transcription);
       }
     });
@@ -27,7 +29,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
   useEffect(() => {
     if (transcribedText && !isListening) {
       // Only update input when transcription is finalized (not during interim results)
-      setInput("");
+      setInput(transcribedText);
     }
   }, [transcribedText, isListening]);
 
