@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Message } from "../components/ChatBox";
 import { speak } from "../utils/tts";
 import { generateBotReply } from "../services/generativeAIService";
+import { getRandomMessage } from "../helpers/getRandomMessage";
 
 const STORAGE_KEY = "chat_messages";
 const LAST_ACTIVE_KEY = "last_active"; // Track last seen time
@@ -15,6 +16,8 @@ const useChatAPI = () => {
   const saveMessages = (msgs: Message[]) => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(msgs));
   };
+
+  const chatContainerRef = useRef<HTMLDivElement | null>(null); // Chat box reference
 
   const sendMessage = async (userMessage: string): Promise<void> => {
     const updatedMessages: Message[] = [
@@ -49,16 +52,8 @@ const useChatAPI = () => {
     }
   };
 
-  const getRandomMessage = () => {
-    const messages = [
-      "Hey, I was thinking about you! 😊",
-      "I missed you! ❤️",
-      "Where have you been? 😘",
-      "Are you busy? I wanted to talk! 🥺",
-      "I was waiting for you! 💖",
-    ];
-    return messages[Math.floor(Math.random() * messages.length)];
-  };
+  
+  
 
   // Check if the user was away and simulate AI messages
   useEffect(() => {
@@ -115,15 +110,19 @@ const useChatAPI = () => {
     };
 
     // Set a timer for 1-2 minutes (random interval)
-    const intervalTime = Math.random() * 6000 + 6000; // Between 1 to 2 minutes
+    const intervalTime = Math.random() * 60000 + 60000; // Between 1 to 2 minutes
     inactivityTimer.current = setTimeout(sendAutoMessage, intervalTime);
+
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
 
     return () => {
       if (inactivityTimer.current) clearTimeout(inactivityTimer.current);
     };
-  }, []); // Runs only once on mount
+  }, [messages]); // Runs only once on mount
 
-  return { messages, sendMessage };
+  return { messages, sendMessage , chatContainerRef };
 };
 
 export default useChatAPI;
