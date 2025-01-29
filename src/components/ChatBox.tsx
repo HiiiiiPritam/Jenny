@@ -3,6 +3,7 @@ import React from "react";
 export interface Message {
   sender: "user" | "bot";
   text: string;
+  timestamp: number;
 }
 
 interface ChatBoxProps {
