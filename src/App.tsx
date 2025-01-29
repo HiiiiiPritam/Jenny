@@ -1,7 +1,7 @@
 import React from "react";
 import ChatBox from "./components/ChatBox";
 import ChatInput from "./components/ChatInput";
-import ladki from "./assets/indi-gf.webp";
+import ladki from "./images/indi-gf.webp"
 import useChatAPI from "./hooks/useChatAPI";
 
 
