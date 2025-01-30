@@ -1,37 +1,40 @@
 import { Message } from "../components/ChatBox";
 
-// Filter out very short messages and prioritize user input
-const getKeyMessages = (messages: Message[]): Message[] => {
-  // We will iterate backwards through the messages to capture the latest user input and a balanced context
-  let keyMessages: Message[] = [];
-  let userMessagesCount = 0;
+const MAX_TOKENS = 100; // Adjust based on API limits
 
-  // Iterate backward to prioritize the user's messages
-  for (let i = messages.length - 1; i >= 0 && keyMessages.length < 10; i--) {
-    const msg = messages[i];
+function tokenize(text: string): string[] {
+  return text.split(/\s+/); // Simple tokenization (split by spaces)
+}
 
-    // Only include messages that are meaningful (length > 5)
-    if (msg.text.length > 5) {
-      // Include user messages and their following AI responses
-      if (msg.sender === "user") {
-        userMessagesCount++;
-      }
+function applySlidingWindow(context: string[]): string {
+  const tokens = context.flatMap(tokenize); // Flatten and tokenize
+  const truncatedTokens = tokens.slice(-MAX_TOKENS); // Keep last N tokens
+  return truncatedTokens.join(" "); // Reconstruct text
+}
 
-      keyMessages.unshift(msg);
+function processContext(messages: Message[]): string {
+  // Convert messages to formatted strings
+  const chatHistory = messages.map((msg) =>
+    `${msg.sender === "user" ? "User" : "Bot"}: ${msg.text}`
+  );
 
-      // If we have enough user messages, stop adding more AI responses
-      if (userMessagesCount >= 3) {
-        break;
-      }
-    }
-  }
+  const trimmedContext = applySlidingWindow(chatHistory);
 
-  return keyMessages;
-};
+  return summarizeContext(trimmedContext);
+}
 
+// Summarization function
+function summarizeContext(text: string): string {
+  const sentences = text.split(/[.!?]/).map((s) => s.trim()).filter(Boolean);
+
+  if (sentences.length <= 3) return text;
+
+  const importantParts = sentences.slice(-3).join(". ") + "."; // Keep last 3 key sentences
+
+  return importantParts;
+}
+
+// Replace getKeyMessages with processContext
 export const buildContext = (messages: Message[]): string => {
-  const keyMessages = getKeyMessages(messages);
-  return keyMessages
-    .map((msg) => `${msg.sender === "user" ? "User" : "Bot"}: ${msg.text}`)
-    .join("\n");
+  return processContext(messages);
 };
