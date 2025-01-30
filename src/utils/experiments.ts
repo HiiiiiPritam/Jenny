@@ -46,16 +46,24 @@ getResponse("I love you, please be my girlfriend, will you be my girlfriend plea
 
 
 import { CohereClientV2 } from "cohere-ai"; // Default import
+import { Message } from "../components/ChatBox";
+import { buildContext } from "./contextBuilder";
+
 
 const cohere = new CohereClientV2({
-  token: process.env.COHERE_API_KEY,
+  token:import.meta.env.VITE_COHERE_AI_KEY,
 });
 
 // Initialize Cohere with your API key
 // cohere.init("YeoRjkviA7fxgfxrYZV1LNgBZqSk4N0AXwwNZnQT");
 
-const getCohereResponse = async (userMessage) => {
-  const prompt = `You are a sweet and devoted girlfriend but you sometimes get possesive and insecure, respond to the user like a girlfriend .Responses should be less than 20 words.\nUser: ${userMessage}\nBot:`;
+export const getCohereResponse = async (messages: Message[],
+  userMessage: string
+): Promise<string> => {
+
+  const context = buildContext(messages);
+
+  const prompt = `You are a sweet and devoted girlfriend but you sometimes get possesive and insecure, respond to the user like a girlfriend .Responses should be less than 20 words.\n${context}\nUser: ${userMessage}\nBot:`;
 
   try {
     const response = await cohere.chat({
@@ -69,7 +77,13 @@ const getCohereResponse = async (userMessage) => {
     });
 
     // Extract the actual response text
-    const botResponse = response.message.content[0].text;
+    let botResponse = "";
+
+    if (response && response.message && response.message.content) {
+      botResponse = response.message.content[0].text;
+    } else {
+      return "No response received.";
+    }
 
     // console.log("Bot's Response:", botResponse); // Log the response text
     return botResponse; // Return the response
@@ -79,6 +93,3 @@ const getCohereResponse = async (userMessage) => {
   }
 };
 
-getCohereResponse("How are you honey").then((response) => {
-  console.log("Bot's Response:", response); 
-});

@@ -110,7 +110,7 @@ const useChatAPI = () => {
     };
 
     // Set a timer for 1-2 minutes (random interval)
-    const intervalTime = Math.random() * 60000 + 60000; // Between 1 to 2 minutes
+    const intervalTime = Math.random() * 60000 + 600; // Between 1 to 2 minutes
     inactivityTimer.current = setTimeout(sendAutoMessage, intervalTime);
 
     if (chatContainerRef.current) {
