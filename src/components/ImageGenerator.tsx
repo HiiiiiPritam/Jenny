@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import { log } from 'console';
 
 const ImageGenerator = () => {
   const [prompt, setPrompt] = useState('');

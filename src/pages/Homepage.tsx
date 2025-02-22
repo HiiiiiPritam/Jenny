@@ -1,4 +1,3 @@
-import React from 'react'
 import ChatBox from '../components/ChatBox'
 import ChatInput from '../components/ChatInput'
 import useChatAPI from '../hooks/useChatAPI';
