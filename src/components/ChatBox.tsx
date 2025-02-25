@@ -1,17 +1,20 @@
 import React, { useEffect } from "react";
+import TypingIndicator from "./utilities/TypingIndicator";
 
 export interface Message {
   sender: "user" | "bot";
-  text: string;
+  text?: string;
+  imageUrl?: string;
   timestamp: number;
 }
 
 interface ChatBoxProps {
   messages: Message[];
+  isTyping: boolean;
   chatContainerRef: React.RefObject<HTMLDivElement>;
 }
 
-const ChatBox: React.FC<ChatBoxProps> = ({ messages, chatContainerRef }: ChatBoxProps) => {
+const ChatBox: React.FC<ChatBoxProps> = ({ messages, chatContainerRef, isTyping }: ChatBoxProps) => {
   // Scroll to the bottom whenever messages change
   useEffect(() => {
     if (chatContainerRef.current) {
@@ -32,8 +35,12 @@ const ChatBox: React.FC<ChatBoxProps> = ({ messages, chatContainerRef }: ChatBox
           }`}
         >
           {msg.text}
+          {msg.sender === "bot" && msg.imageUrl && <img src={msg.imageUrl} alt="Generated" className="max-w-[300px] rounded-md mt-2" />}
         </div>
       ))}
+      {isTyping && (
+        <TypingIndicator />
+      )}
     </div>
   );
 };

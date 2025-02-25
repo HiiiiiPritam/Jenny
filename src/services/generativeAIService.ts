@@ -65,3 +65,19 @@ export const generateBotReply = async (
     throw error;
   }
 };
+
+export const generateImage = async (prompt: string): Promise<string | null> => {
+  try {
+    const response = await fetch(`https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}`);
+    
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status} ${response.statusText}`);
+    }
+
+    return response.url; // Pollinations serves images directly via URL
+  } catch (error) {
+    console.error("Failed to generate image:", error);
+    return null;
+  }
+};
+

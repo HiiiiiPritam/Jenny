@@ -1,1 +1,5 @@
-1) Learn how to limit response token size.
+1) Learn how to limit response token size. ❌
+
+2) Currently i have stopped the auto messaging thing but you have to turn it on later on.
+
+3) there is a bug that i have noticed, since i am storing the inputs for the images also in the messages array so they are used in the context for the ai text responses . This gets weird sometimes. ❌

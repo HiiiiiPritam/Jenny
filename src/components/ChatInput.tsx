@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import useSpeechToText from "../hooks/useSpeechToText";
 
 interface ChatInputProps {
-  onSend: (message: string) => void; // Function to send a message to the parent
+  onSend: (userMessage: string, isImage: boolean) => void;
+  isTyping: boolean
 }
 
-const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
+const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
   const [input, setInput] = useState<string>("");
+  const [generateImage, setGenerateImage] = useState<boolean>(false);
 
   // Speech-to-Text hook
   const { isListening, transcribedText, startListening, stopListening } =
@@ -15,14 +17,15 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
       console.log("Transcription:", transcription);
       if (transcription.trim()) {
         setInput(transcription); // Set input immediately
-        onSend(transcription);
+        onSend(transcription,generateImage);
       }
     });
 
   const handleSend = () => {
     if (input.trim()) {
-      onSend(input); // Pass input to parent for sending
+      onSend(input,generateImage); // Pass input to parent for sending
       setInput(""); // Clear input field after sending
+      setGenerateImage(false);
     }
   };
 
@@ -48,14 +51,22 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
       onClick={isListening ? stopListening : startListening}
       className={`px-4 py-2 rounded-md ${
         isListening ? "bg-red-600" : "bg-green-600"
-      } text-white hover:opacity-80 min-w-[80px]`}
+      } text-white ${isTyping ? "pointer-events-none bg-gray-500" : ""} hover:opacity-80 min-w-[80px]`}
     >
       {isListening ? "Stop" : "Speak"}
     </button>
+    <label className="flex items-center gap-2">
+        <input
+          type="checkbox"
+          checked={generateImage}
+          onChange={() => setGenerateImage(!generateImage)}
+        />
+        Generate Image
+      </label>
     {/* Send Button */}
     <button
       onClick={handleSend}
-      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 min-w-[80px]"
+      className={`px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 min-w-[80px] ${isTyping ? "pointer-events-none bg-gray-500" : ""}`}
     >
       Send
     </button>
