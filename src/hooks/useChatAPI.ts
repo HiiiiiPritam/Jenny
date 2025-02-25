@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { Message } from "../components/ChatBox";
 import { speak } from "../utils/tts";
 import { generateBotReply, generateImage } from "../services/generativeAIService";
-import { set } from "cohere-ai/core/schemas";
+// import { set } from "cohere-ai/core/schemas";
 // import { getRandomMessage } from "../helpers/getRandomMessage";
 
 const STORAGE_KEY = "chat_messages";
