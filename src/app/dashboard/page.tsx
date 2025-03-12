@@ -15,12 +15,17 @@ const ExplorePage = () => {
   const { data: session } = useSession();
 
   useEffect(() => {
-    const loadCharacters = async () => {
-      await fetchCharacters();
-      setLoading(false);
-    };
-    loadCharacters();
-  }, []);
+    if (characters.length === 0) { // ✅ Fetch only if no characters exist
+      const loadCharacters = async () => {
+        await fetchCharacters();
+        setLoading(false);
+      };
+      loadCharacters();
+    } else {
+      setLoading(false); // ✅ Avoid unnecessary loading state
+    }
+  }, [characters.length]); // ✅ Depend only on `characters.length`
+  
 
   if (!session) return <div>Login first</div>;
   if (loading) return <p>Loading characters...</p>;
