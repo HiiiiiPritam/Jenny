@@ -6,7 +6,7 @@ import { generateImage } from "@/services/generativeAIService";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 // import { createCharacter } from "@/services/characterService"; 
-
+import './style.css'
 
 const CreateCharacter = () => {
   const [character, setCharacter] = useState({
@@ -14,7 +14,7 @@ const CreateCharacter = () => {
     name: "",
     description: "",
     isPublic: true,
-    createdBy: "67d09ae5cca1f83413315799", // Example user ID (replace dynamically)
+    createdBy: "", // Example user ID (replace dynamically)
 
     // Appearance
     ethnicity: "Caucasian",
@@ -158,8 +158,8 @@ const CreateCharacter = () => {
   if(!session?.user.id)return <div>No user present</div>
 
   return (
-    <div className="p-6 max-w-2xl mx-auto">
-  <h2 className="text-2xl font-bold mb-4">Create a New Character</h2>
+    <div className="p-6 relative z-10 max-h-[calc(100dvh-4rem)] overflow-auto inset-0 bg-gradient-to-br text-[#753a6d] from-darkPurple to-black max-w-2xl mx-auto">
+  <h2 className="text-2xl text-matteRed font-bold mb-4">Create a New Character</h2>
 
   {/* Name */}
   <div className="mb-4">
