@@ -1,4 +1,5 @@
-import { Message } from "../components/ChatBox";
+import {Message} from '@/store/chatStore'
+
 
 const MAX_TOKENS = 100; // Adjust based on API limits
 
