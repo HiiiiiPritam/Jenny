@@ -47,7 +47,7 @@ const ChatPage = () => {
   }
 
   return (
-    <div className="p-6 inset-0 bg-gradient-to-br from-darkPurple to-black max-h-[calc(100dvh-4rem)] overflow-auto relative z-10">
+    <div className="p-6 inset-0 bg-gradient-to-br from-darkPurple to-black max-h-[calc(100dvh-4rem)] overflow-auto relative z-10 ">
       <button onClick={() => router.push("/dashboard/my-chats")} className="mb-4 text-blue-500">
         ← Back to My Chats
       </button>

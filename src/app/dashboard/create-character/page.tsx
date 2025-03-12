@@ -158,7 +158,7 @@ const CreateCharacter = () => {
   if(!session?.user.id)return <div>No user present</div>
 
   return (
-    <div className="p-6 relative z-10 max-h-[calc(100dvh-4rem)] overflow-auto inset-0 bg-gradient-to-br text-[#753a6d] from-darkPurple to-black max-w-2xl mx-auto">
+    <div className="p-6 relative z-10 max-h-[calc(100dvh-4rem)] overflow-auto inset-0 bg-gradient-to-br text-[#753a6d] from-darkPurple to-black w-full mx-auto ">
   <h2 className="text-2xl text-matteRed font-bold mb-4">Create a New Character</h2>
 
   {/* Name */}
