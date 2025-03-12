@@ -45,7 +45,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
       type="text"
       value={input}
       onChange={(e) => setInput(e.target.value)}
-      className="flex-1 p-2 border rounded-md min-w-[150px] sm:min-w-[250px] max-w-full"
+      className="flex-1 p-2 border rounded-md min-w-[150px] sm:min-w-[250px] max-w-full text-black"
       placeholder="Type a message or use the mic..."
     />
     {/* Speech-to-Text Button */}
@@ -57,13 +57,13 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
     >
       {isListening ? "Stop" : "Speak"}
     </button>
-    <label className="flex items-center gap-2">
+    <label className="flex text-white items-center gap-2">
         <input
           type="checkbox"
           checked={generateImage}
           onChange={() => setGenerateImage(!generateImage)}
         />
-        Generate Image
+        Image
       </label>
     {/* Send Button */}
     <button
