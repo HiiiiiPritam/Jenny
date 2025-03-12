@@ -1,11 +1,11 @@
 "use client";
+import { BackgroundEffect } from "@/components/BackgroundComponent";
 import useCharacterStore from "@/store/useCharacterStore";
 import { motion } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BackgroundEffect } from "../page";
-import { div } from "framer-motion/client";
+
 
 
 const ExplorePage = () => {
