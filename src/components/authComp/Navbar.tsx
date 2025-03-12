@@ -1,8 +1,9 @@
 "use client";
 
-import { BackgroundEffect } from "@/app/page";
+
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import { BackgroundEffect } from "../BackgroundComponent";
 
 export default function Navbar() {
   const { data: session } = useSession(); // Get user session
