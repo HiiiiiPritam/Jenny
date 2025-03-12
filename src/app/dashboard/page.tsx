@@ -1,8 +1,12 @@
 "use client";
 import useCharacterStore from "@/store/useCharacterStore";
+import { motion } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BackgroundEffect } from "../page";
+import { div } from "framer-motion/client";
+
 
 const ExplorePage = () => {
   const { characters, fetchCharacters } = useCharacterStore();
@@ -50,22 +54,52 @@ const ExplorePage = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Explore AI Characters</h1>
-      <div className="grid grid-cols-3 gap-4">
-        {characters.map((char) => (
-          <div 
-            key={char._id} 
-            onClick={() => createChat(char._id)} 
-            className="bg-gray-100 p-4 rounded shadow cursor-pointer"
-          >
-            <img src={char.profilePicture} alt={char.name} />
-            <h2 className="text-lg font-semibold">{char.name}</h2>
-            <p className="text-gray-600">{char.description}</p>
-          </div>
-        ))}
+    
+    <div className="bg-black text-white flex flex-col h-[calc(100dvh-4rem)]  overflow-hidden px-6 relative ">
+    {/* Background Gradient Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-br from-darkPurple to-black opacity-60"></div>
+
+    {/* Floating Background Effect */}
+    <BackgroundEffect />
+
+    {/* Title */}
+    <motion.h1
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="text-5xl font-extrabold text-matteRed drop-shadow-lg text-center z-10"
+    >
+      Explore AI Characters
+    </motion.h1>
+
+    {/* Character Grid */}
+    <div className="relative z-10 flex-1 mt-6 overflow-y-auto overflow-x-hidden w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 z-10">
+      {characters.map((char) => (
+        <div
+        key={char._id}
+        onClick={() => createChat(char._id)}
+        className="bg-white bg-opacity-10 backdrop-blur-lg p-4 rounded-xl shadow-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl"
+      >
+        <div className="overflow-hidden rounded-lg">
+          <img
+            src={char.profilePicture}
+            alt={char.name}
+            className="w-full h-48 object-cover rounded-lg transition-transform duration-300 hover:scale-110"
+          />
+        </div>
+
+        <h2 className="text-xl font-semibold text-white mt-3">
+          {char.name}
+        </h2>
+        <p className="text-gray-300">{char.description}</p>
       </div>
+      ))}
+
     </div>
+    </div>
+    
+  </div>
   );
 };
 

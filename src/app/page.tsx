@@ -63,7 +63,7 @@ export default function LandingPage() {
 }
 
 /* Background Animation Component */
-function BackgroundEffect() {
+export function BackgroundEffect() {
   return (
     <div className="absolute inset-0 overflow-hidden">
       <motion.div

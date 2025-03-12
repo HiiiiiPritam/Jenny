@@ -26,16 +26,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    
-    <html lang="en">
-      
+  return (  
+    <html lang="en"> 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-[100dvh] `}
       >
         <AuthProvider>
-          <Navbar/>
-        {children}
+          <Navbar/> 
+          <main>
+          {children}
+          </main>
+        
         </AuthProvider>
       </body>
       

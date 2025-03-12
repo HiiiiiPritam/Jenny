@@ -39,7 +39,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
   }, [transcribedText, isListening]);
 
   return (
-    <div className="flex flex-wrap w-full max-w-[800px] items-center gap-2 p-4">
+    <div className="relative z-10 flex flex-wrap w-full max-w-[800px] items-center gap-2 p-4">
     {/* Input field for typing */}
     <input
       type="text"

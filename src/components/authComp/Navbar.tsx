@@ -1,5 +1,6 @@
 "use client";
 
+import { BackgroundEffect } from "@/app/page";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 
@@ -7,14 +8,18 @@ export default function Navbar() {
   const { data: session } = useSession(); // Get user session
 
   return (
-    <nav className="bg-gray-900 p-4 flex justify-between items-center">
+    <nav className="bg-gray-900 h-16 p-4 flex justify-between items-center ">
       {/* Left: Logo */}
+      <div className="md:hidden">
+
+      </div>
       <Link href="/" className="text-white text-lg font-bold">
         AI Girlfriend
       </Link>
+      <BackgroundEffect/>
 
       {/* Right: Authentication Section */}
-      <div>
+      <div className="relative z-10">
         {session ? (
           <div className="flex items-center gap-4">
             {/* User Avatar & Name */}
@@ -26,8 +31,8 @@ export default function Navbar() {
               />
             )}
             <span className="text-white">{session.user?.name}</span>
-
-            <Link href="/dashboard">dashboard</Link>
+{/* 
+            <Link href="/dashboard">dashboard</Link> */}
 
             {/* Logout Button */}
             <button
