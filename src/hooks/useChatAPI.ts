@@ -1,174 +1,76 @@
-"use client"
+"use client";
 import { useState, useRef, useEffect } from "react";
-import { Message } from "../components/ChatBox";
 import { speak } from "../utils/tts";
 import { generateBotReply, generateImage } from "../services/generativeAIService";
-// import { set } from "cohere-ai/core/schemas";
-// import { getRandomMessage } from "../helpers/getRandomMessage";
+import { fetchChatMessages, saveChatMessage } from "../services/chatService";
+import { useChatStore } from "@/store/chatStore";
+import {Message} from '@/store/chatStore'
 
-const STORAGE_KEY = "chat_messages";
-// const LAST_ACTIVE_KEY = "last_active"; // Track last seen time
 
-const useChatAPI = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+const useChatAPI = (chatId: string) => {
+  const { messages, selectChat, addMessage ,selectedChat} = useChatStore();
   const [isTyping, setIsTyping] = useState(false);
+  const chatContainerRef = useRef<HTMLDivElement | null>(null);
 
+  // Load messages when chatId changes
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedMessages = localStorage.getItem(STORAGE_KEY);
-      if (savedMessages) {
-        setMessages(JSON.parse(savedMessages));
-      }
-    }
-  }, []);
+    if (!chatId) return;
 
-  const saveMessages = (msgs: Message[]) => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(msgs));
-    }
-  };
-
-  const chatContainerRef = useRef<HTMLDivElement | null>(null); // Chat box reference
-
-  const sendMessage = async ({userMessage, isImage}:{userMessage: string, isImage?: boolean}): Promise<void> => {
-    if(isImage === undefined) isImage = false;
-    let updatedMessages: Message[];
-    if(isImage){
-       updatedMessages= [
-        ...messages,
-        { sender: "user", imageUrl: userMessage, text:userMessage, timestamp: Date.now() },
-      ];
-      setMessages(updatedMessages);
-      saveMessages(updatedMessages);
-    }else{
-      updatedMessages = [
-        ...messages,
-        { sender: "user", text: userMessage, timestamp: Date.now() },
-      ];
-      setMessages(updatedMessages);
-      saveMessages(updatedMessages);
-    }
-    
-
-    if (isImage) {
+    const loadMessages = async () => {
+      setIsTyping(true);
       try {
-        // Call the image generation service using the userMessage as prompt
-        setIsTyping(true);
-        const imageUrl = await generateImage(userMessage) as string;
-        const botImageMessage: Message = { sender: "bot", imageUrl, timestamp: Date.now() };
-        setMessages((prev) => [...prev, botImageMessage]);
-        saveMessages([...updatedMessages, botImageMessage]);
-        setIsTyping(false);
+        const fetchedMessages = await fetchChatMessages(chatId);
+        selectChat(chatId); // Set the chat in the store
       } catch (error) {
-        console.error("Error generating image:", error);
-        const errorMessage: Message = {
-          sender: "bot",
-          text: "Error generating image. Please try again.",
-          timestamp: Date.now(),
-        };
-        setMessages((prev) => [...prev, errorMessage]);
-        saveMessages([...updatedMessages, errorMessage]);
+        console.error("Error fetching chat messages:", error);
       }
-    } else {
+      setIsTyping(false);
+    };
 
-      try {
+    loadMessages();
+  }, [chatId]);
 
-        setIsTyping(true);
-        const filteredMessages = updatedMessages.filter((msg) => msg.imageUrl === undefined);
-        console.log("filteredMessages", filteredMessages);
-        
-        const reply = await generateBotReply(filteredMessages, userMessage);
+  const sendMessage = async ({ userMessage, isImage = false }: { userMessage: string; isImage?: boolean }): Promise<void> => {
+    let userMsg: Message = {
+      sender: "user",
+      text: userMessage,
+      isImage,
+      isVoice: false,
+      timestamp: new Date().toISOString(),
+    };
+
+    addMessage(userMsg);
+    await saveChatMessage(chatId, userMsg); 
+
+    try {
+      setIsTyping(true);
+      let botMsg: Message;
+
+      if (isImage) {
+        const imageUrl = await generateImage({userMessage,baseprompt:selectedChat?.character.baseImagePrompt as string});
+        botMsg = { sender: "bot", imageURL: imageUrl ?? "", isImage: true, timestamp: new Date().toISOString() };
+      } else {
+        const filteredMessages = messages.filter((msg)=> msg.sender==="bot" && msg.isImage)
+        const reply = await generateBotReply(messages, userMessage,selectedChat?.character.basePersonalityPrompt as string);
         if (reply && reply !== "No response received.") {
           speak(reply);
         }
-        const botMessage: Message = { sender: "bot", text: reply, timestamp: Date.now() };
-        setMessages((prev) => [...prev, botMessage]);
-        saveMessages([...updatedMessages, botMessage]);
-        setIsTyping(false);
-      } catch (error) {
-        setIsTyping(false);
-        console.error("Error sending message:", error);
-        const errorMessage: Message = {
-          sender: "bot",
-          text: "Something went wrong. Please try again later.",
-          timestamp: Date.now(),
-        };
-        setMessages((prev) => [...prev, errorMessage]);
-        saveMessages([...updatedMessages, errorMessage]);
+        botMsg = { sender: "bot", text: reply, timestamp: new Date().toISOString() };
       }
+
+      addMessage(botMsg);
+      await saveChatMessage(chatId, botMsg); // Save bot message
+    } catch (error) {
+      console.error("Error sending message:", error);
+      const errorMessage: Message = { sender: "bot", text: "Something went wrong. Please try again.", timestamp: new Date().toISOString() };
+      addMessage(errorMessage);
+      await saveChatMessage(chatId, errorMessage); // Save error message
     }
+
+    setIsTyping(false);
   };
 
-  // Check if the user was away and simulate AI messages
-  // useEffect(() => {
-  //   const lastActive = localStorage.getItem(LAST_ACTIVE_KEY);
-  //   const lastMessage = messages.length > 0 ? messages[messages.length - 1] : null;
-
-  //   if (lastActive && lastMessage) {
-  //     const lastActiveTime = parseInt(lastActive, 10);
-  //     const timeSinceLastActive = Date.now() - lastActiveTime;
-
-  //     // If the user was gone for more than 1 hour and AI wasn't the last sender
-  //     if (timeSinceLastActive > 60 * 60 * 1000 ) {
-  //       console.log("Time since last active inside the main useEffect:", timeSinceLastActive);
-
-  //       const aiMessage: Message = { sender: "bot", text: getRandomMessage(), timestamp: Date.now() };
-
-  //       setMessages((prev) => {
-  //         const updatedMessages = [...prev, aiMessage];
-  //         saveMessages(updatedMessages);
-  //         return updatedMessages;
-  //       });
-
-  //       speak(aiMessage.text);
-  //     }
-  //   }
-
-  //   // Update last active time when user is back
-  //   localStorage.setItem(LAST_ACTIVE_KEY, Date.now().toString());
-  // }, []); 
-  // Runs only once when the component mounts
-
-  //------------------------------------------------------------------//
-
-  // AI sends a message automatically if the user is inactive
-  // const inactivityTimer = useRef<NodeJS.Timeout | null>(null);
-
-  // useEffect(() => {
-  //   const sendAutoMessage = () => {
-  //     const lastMessage = messages.length > 0 ? messages[messages.length - 1] : null;
-
-  //     if (!lastMessage || Date.now() - lastMessage.timestamp > 60000) {
-
-  //       if(lastMessage) console.log("Time since last message:", Date.now() - lastMessage.timestamp);
-  //       else console.log("No last message but still sending AI message");
-        
-  //       const aiMessage: Message = { sender: "bot", text: getRandomMessage(), timestamp: Date.now() };
-  //       setMessages((prev) => {
-  //         const updatedMessages = [...prev, aiMessage];
-  //         saveMessages(updatedMessages);
-  //         return updatedMessages;
-  //       });
-
-  //       speak(aiMessage.text);
-  //     }
-  //   };
-
-  //   // Set a timer for 1-2 minutes (random interval)
-  //   const intervalTime = Math.random() * 60000 + 600; // Between 1 to 2 minutes
-  //   inactivityTimer.current = setTimeout(sendAutoMessage, intervalTime);
-
-  //   if (chatContainerRef.current) {
-  //     chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
-  //   }
-
-  //   return () => {
-  //     if (inactivityTimer.current) clearTimeout(inactivityTimer.current);
-  //   };
-  // }, [messages]);
-   // Runs only once on mount
-
-  return { messages, sendMessage , chatContainerRef ,isTyping};
+  return { messages, sendMessage, chatContainerRef, isTyping };
 };
 
 export default useChatAPI;
