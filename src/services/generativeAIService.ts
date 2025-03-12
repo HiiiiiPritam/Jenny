@@ -1,9 +1,8 @@
-// import { GoogleGenerativeAI } from "@google/generative-ai";
-import { Message } from "../components/ChatBox";
+import {Message} from '@/store/chatStore'
+
 import { buildContext } from "../utils/contextBuilder";
 import { CohereClientV2 } from "cohere-ai";
 
-// const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GOOGLE_API_KEY);
 
 const cohere = new CohereClientV2({
   token: process.env.NEXT_PUBLIC_COHERE_AI_KEY,
@@ -11,32 +10,15 @@ const cohere = new CohereClientV2({
 
 export const generateBotReply = async (
   messages: Message[],
-  userMessage: string
+  userMessage: string,
+  baseprompt:string,
 ): Promise<string> => {
-  // try {
-  // const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-  // Combine messages into context
   const context = buildContext(messages);
-
-  // Send the userMessage with context
-  // const result = await model.generateContent(
-  //   `You are a sweet and devoted girlfriend but you sometimes get possesive and insecure, respond to the user like a girlfriend .Responses should be less than 20 words.\n${context}\nUser: ${userMessage}\nBot:`
-  // );
-
-  // const response = result.response;
-
-  // if (!response) {
-  //   throw new Error("No response received.");
-  // }
-
-  // return response.text() || "No response received.";
-
-  // ----------------------------------------
 
   console.log("context", context);
   
-  const prompt = `You are a sweet and devoted girlfriend but you sometimes get possesive and insecure,respond like a girlfriend.Responses should be less than 15 words.\n:${context}\nUser: ${userMessage}\nBot:`;
+  const prompt = `Responses should be less than 15 words. Act as the character mentioned below. ${baseprompt}.\n:${context}\nUser: ${userMessage}\nBot:`;
 
   try {
     const response = await cohere.chat({
@@ -58,7 +40,6 @@ export const generateBotReply = async (
       return "No response received.";
     }
 
-    // console.log("Bot's Response:", botResponse); // Log the response text
     return botResponse;
   } catch (error) {
     console.error("Error in generateBotReply:", error);
@@ -66,8 +47,12 @@ export const generateBotReply = async (
   }
 };
 
-export const generateImage = async (prompt: string): Promise<string | null> => {
+export const generateImage = async ({userMessage, baseprompt=""}: {userMessage:string, baseprompt?:string}): Promise<string | null> => {
   try {
+
+    const prompt = baseprompt !==""? baseprompt+'. '+userMessage:userMessage
+    console.log(prompt);
+    
     const response = await fetch(`https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}`);
     
     if (!response.ok) {
