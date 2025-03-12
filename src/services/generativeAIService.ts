@@ -53,7 +53,7 @@ export const generateImage = async ({userMessage, baseprompt=""}: {userMessage:s
     const prompt = baseprompt !==""? baseprompt+'. '+userMessage:userMessage
     console.log(prompt);
     
-    const response = await fetch(`https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}`);
+    const response = await fetch(`https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1080&height=1920&nologo=true&private=true&enhance=true&safe=false`);
     
     if (!response.ok) {
       throw new Error(`Error: ${response.status} ${response.statusText}`);
