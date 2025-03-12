@@ -9,12 +9,12 @@ export default function Navbar() {
   const { data: session } = useSession(); // Get user session
 
   return (
-    <nav className="bg-gray-900 h-16 p-4 flex justify-between items-center ">
+    <nav className="bg-gray-900 h-16 p-4 flex justify-between items-center w-full">
       {/* Left: Logo */}
       <div className="md:hidden">
 
       </div>
-      <Link href="/" className="text-white text-lg font-bold">
+      <Link href="/" className="text-white text-lg text-right font-bold">
         AI Girlfriend
       </Link>
       <BackgroundEffect/>
@@ -31,8 +31,7 @@ export default function Navbar() {
                 className="w-8 h-8 rounded-full"
               />
             )}
-            <span className="text-white">{session.user?.name}</span>
-{/* 
+            {/* 
             <Link href="/dashboard">dashboard</Link> */}
 
             {/* Logout Button */}
