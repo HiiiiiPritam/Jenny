@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useChatStore } from "@/store/chatStore";
 import { useSession } from "next-auth/react";
-import { BackgroundEffect } from "@/app/page";
 import { motion } from "framer-motion";
+import { BackgroundEffect } from "@/components/BackgroundComponent";
 
 
 const MyChats = () => {
