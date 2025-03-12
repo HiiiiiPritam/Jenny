@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import TypingIndicator from "./utilities/TypingIndicator";
 import {Message} from '@/store/chatStore'
 import { useChatStore } from "@/store/chatStore";
-import { div } from "framer-motion/client";
 
 interface ChatBoxProps {
   messages: Message[];
