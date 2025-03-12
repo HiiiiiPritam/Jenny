@@ -38,11 +38,10 @@ const ExplorePage = () => {
 
       if (response.ok) {
         alert("Chat created");
-        // router.push(`/dashboard/my-chats/${data._id}`);
+        router.push(`/dashboard/my-chats/${data._id}`);
       } else {
         if (data.error === "Chat already exists") {
-          alert("Chat already exists. Find in my Chats");
-          // router.push(`/dashboard/my-chats/${data.chatId}`); // ✅ Redirect to existing chat
+          router.push(`/dashboard/my-chats/${data.chatId}`); // ✅ Redirect to existing chat
         } else {
           alert(data.error || "Something went wrong");
         }
