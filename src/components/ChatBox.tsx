@@ -29,7 +29,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({ messages, chatContainerRef, isTyping}
 
   return (
     <div >
-      <div className="flex gap-2 h-10">
+      <div className="flex gap-2 h-10 w-100vw">
       <img className="rounded-full" src={character.profilePicture} alt="character pp" />
       <span className="text-white  font-bold">{character.name}</span>
       </div>
@@ -41,12 +41,12 @@ const ChatBox: React.FC<ChatBoxProps> = ({ messages, chatContainerRef, isTyping}
       {messages?.map((msg, index) => (
         <div
           key={index}
-          className={`p-3 rounded-md opacity-75 ${
+          className={`p-3 max-w-[90%] md:max-w-[60%] lg:max-w-[50%] rounded-md opacity-75 ${
             msg.sender === "user" ? "bg-blue-500 text-white self-end" : "bg-gray-100 text-black self-start"
           }`}
         >
           {msg.text}
-          {msg.sender === "bot" && msg.isImage && <img src={msg.imageURL} alt="Generated" className="max-w-[300px] rounded-md mt-2" />}
+          {msg.sender === "bot" && msg.isImage && <img src={msg.imageURL} alt="Generated" className=" h-auto rounded-md mt-2" />}
         </div>
       ))}
       {isTyping && (
