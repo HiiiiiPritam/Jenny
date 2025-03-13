@@ -64,6 +64,12 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
       const data = await res.json();
       const description =
         data?.choices?.[0]?.message?.content || "No description available";
+      if(description == "No description available") {
+        alert("No description available, please try again with a different image or wait for some time and try again.");
+        setVisionOutput("");
+        setIsImageUploading(false);
+        return
+      }
       setVisionOutput(description);
       alert("Image uploaded successfully, now give your input");
       // Update input field to combine vision output with user's text
@@ -79,7 +85,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
   const handleSend = () => {
     if (input.trim()) {
       let combinedInput = input;
-      if (visionOutput !== "") {
+      if (visionOutput !== "" && visionOutput !== "No description available") {
         combinedInput = `This is the description of a photo, answer accordingly: ${visionOutput}, User ask: ${input}`;
       }
       console.log("Combined Input:", combinedInput);
