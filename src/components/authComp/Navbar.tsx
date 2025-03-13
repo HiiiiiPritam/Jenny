@@ -15,7 +15,7 @@ export default function Navbar() {
 
       </div>
       <Link href="/" className="text-white text-lg text-right font-bold">
-        AI Girlfriend
+        Jenny AI
       </Link>
       <BackgroundEffect/>
 
