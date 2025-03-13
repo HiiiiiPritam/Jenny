@@ -1,5 +1,6 @@
 "use client";
 import { BackgroundEffect } from "@/components/BackgroundComponent";
+import { useChatStore } from "@/store/chatStore";
 import useCharacterStore from "@/store/useCharacterStore";
 import { motion } from "framer-motion";
 import { useSession } from "next-auth/react";
@@ -13,6 +14,7 @@ const ExplorePage = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const { data: session } = useSession();
+  const{fetchUserChats}= useChatStore()
 
   useEffect(() => {
     if (characters.length === 0) { // ✅ Fetch only if no characters exist
@@ -42,10 +44,12 @@ const ExplorePage = () => {
       const data = await response.json(); // ✅ Await response.json()
 
       if (response.ok) {
-        alert("Chat created");
+        alert("Chat created, wait for redirecting");
+        await fetchUserChats({userID: userId})
         router.push(`/dashboard/my-chats/${data._id}`);
       } else {
         if (data.error === "Chat already exists") {
+          await fetchUserChats({userID: userId})
           router.push(`/dashboard/my-chats/${data.chatId}`); // ✅ Redirect to existing chat
         } else {
           alert(data.error || "Something went wrong");
