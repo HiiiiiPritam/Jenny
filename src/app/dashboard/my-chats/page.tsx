@@ -18,9 +18,13 @@ const MyChats = () => {
 
   useEffect(() => {
     if (!userId) return; // ✅ Prevent running with undefined session
+    const loadChats = async () => {
+      setLoading(true);
+      await fetchUserChats({ userID: userId });
+      setLoading(false);
+    };
 
-    setLoading(true);
-    fetchUserChats({ userID: userId }).finally(() => setLoading(false));
+    loadChats();
   }, [userId, fetchUserChats]); // ✅ Dependencies properly set
 
   if (status === "loading") {
