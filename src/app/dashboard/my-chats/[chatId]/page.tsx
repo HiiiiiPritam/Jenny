@@ -29,8 +29,8 @@ const ChatPage = () => {
 
     // Ensure chats are loaded first, then select the chat
     const fetchAndSelectChat = async () => {
-      await fetchUserChats({ userID: session.user.id }); // Wait for chats
-      selectChat(chatId).then(()=>setLoading(false)); // Now select chat when state is updated
+      // await fetchUserChats({ userID: session.user.id }); // Wait for chats
+      await selectChat(chatId).then(()=>setLoading(false)); // Now select chat when state is updated
     };
     
     
