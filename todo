@@ -1,5 +1,1 @@
-1) change the chatInterfece in th zustand store
-
-2) there is isImage option even for teh user chats so maybe we can use this to check if this message was ment for an image \
-
-3) Right now i am not able to redirect the user to the direct chat page as the chat is not set to anything as i am calling the fetchUserChat from the store in the normal flow
+1) There is a huge issue the image prompt and the personality prompts need  to be changed heavily they are almost the same everytime

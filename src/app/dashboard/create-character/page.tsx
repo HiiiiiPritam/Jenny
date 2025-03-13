@@ -7,6 +7,8 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 // import { createCharacter } from "@/services/characterService"; 
 import './style.css'
+import useCharacterStore from "@/store/useCharacterStore";
+
 
 const CreateCharacter = () => {
   const [character, setCharacter] = useState({
@@ -67,6 +69,8 @@ const CreateCharacter = () => {
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   });
+
+  const {fetchCharacters} = useCharacterStore()
 
   const {data : session} = useSession();
   const router = useRouter();
@@ -152,6 +156,7 @@ const CreateCharacter = () => {
       console.error("Error creating character:", error);
     }
     setIsSubmitting(false);
+    await fetchCharacters();
     router.push('/dashboard/')
   };
 
