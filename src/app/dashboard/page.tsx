@@ -49,6 +49,7 @@ const ExplorePage = () => {
         router.push(`/dashboard/my-chats/${data._id}`);
       } else {
         if (data.error === "Chat already exists") {
+          alert("Chat already exists, wait for redirecting");
           await fetchUserChats({userID: userId})
           router.push(`/dashboard/my-chats/${data.chatId}`); // ✅ Redirect to existing chat
         } else {
@@ -93,7 +94,7 @@ const ExplorePage = () => {
           <img
             src={char.profilePicture}
             alt={char.name}
-            className="w-full h-48 object-cover rounded-lg transition-transform duration-300 hover:scale-110"
+            className="w-full h-52 object-cover rounded-lg transition-transform duration-300 hover:scale-110"
           />
         </div>
 
