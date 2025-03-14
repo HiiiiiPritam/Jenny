@@ -9,15 +9,16 @@ export const generateImagePrompt = (character: any): string => {
   const faceShape = character.faceShape || "oval";
   const age = character.age ? `${character.age} years old` : "young adult";
   const style = character.style || "casual";
-  const personality = character.personalityTraits?.length
-    ? character.personalityTraits.join(", ")
-    : "calm and confident";
+  const bodyfeatures = character.bodyMeasurements || {};
+  const bodyfeaturesText = Object.entries(bodyfeatures)
+    .map(([key, value]) => `${key}: ${value}`)
+    .join(", ");
   
   // Construct the image generation prompt
   const prompt = `
     A highly detailed portrait of ${name}, a ${age} female of ${ethnicity} origin.
-    They have ${hairColor} ${hairStyle}, ${eyeColor} eyes, a ${faceShape} face, and ${skinTone} skin.
-    They are wearing ${style} clothing. Their personality is described as ${personality}.
+    she has ${hairColor} ${hairStyle}, ${eyeColor} eyes, a ${faceShape} face, and ${skinTone} skin. she has ${bodyfeaturesText}.
+    she are wearing ${style} clothing.
     The image should be realistic, well-lit, and aesthetically pleasing.
   `.trim();
 
@@ -47,7 +48,7 @@ export const generatePersonalityPrompt = (character: any): string => {
     : "";
   const preferencesText = [likes, dislikes].filter(Boolean).join(" ");
 
-  const backgroundStory = character.backgroundStory || "They have an intriguing past, shaping their personality.";
+  const backgroundStory = character.backgroundStory || "They have an intriguing past, shaping her personality.";
 
   // Construct the personality prompt
   const prompt = `
