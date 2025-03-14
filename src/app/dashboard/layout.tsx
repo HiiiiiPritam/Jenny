@@ -66,6 +66,19 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
               💬 My Chats
             </span>
           </Link>
+          <Link href="/dashboard/video">
+            <span
+              className={`cursor-pointer p-2 rounded ${
+                active === "video" ? "bg-gray-700" : "hover:bg-gray-700"
+              }`}
+              onClick={() => {
+                setActive("video");
+                setSidebarOpen(false);
+              }}
+            >
+              📽️ video gen
+            </span>
+          </Link>
         </nav>
       </aside>
 
