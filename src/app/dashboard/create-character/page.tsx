@@ -172,7 +172,7 @@ const CreateCharacter = () => {
       basePersonalityPrompt: generatePersonalityPrompt(character),
       baseImagePrompt:
         character.baseImagePrompt ||
-        `A highly detailed portrait of ${character.name}, a ${character.age}-year-old individual of ${character.ethnicity} origin with ${character.skinTone} skin tone and ${character.hairColor} ${character.hairStyle} hair, ${character.eyeColor} eyes, and a ${character.faceShape} face. They are wearing ${character.style} clothing.`,
+        `A highly detailed portrait of ${character.name}, a ${character.age}-year-old individual of ${character.ethnicity} origin with ${character.skinTone} skin tone and ${character.hairColor} ${character.hairStyle} hair, ${character.eyeColor} eyes, and a ${character.faceShape} face.`,
       createdBy: session?.user.id,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),

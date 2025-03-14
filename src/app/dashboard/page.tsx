@@ -94,7 +94,7 @@ const ExplorePage = () => {
           <img
             src={char.profilePicture}
             alt={char.name}
-            className="w-full h-52 object-cover rounded-lg transition-transform duration-300 hover:scale-110"
+            className="w-full h-80 object-cover rounded-lg transition-transform duration-300 hover:scale-110"
           />
         </div>
 
