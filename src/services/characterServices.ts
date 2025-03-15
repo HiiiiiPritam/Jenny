@@ -11,12 +11,26 @@ export const generateImagePrompt = (character: any): string => {
   const style = character.style || "casual";
   const bodyfeatures = character.bodyMeasurements || {};
   const bodyfeaturesText = Object.entries(bodyfeatures)
-    .map(([key, value]) => `${key}: ${value}`)
+    .map(([key, value]) => {
+      if(key==='height') return `${key}: ${value}cm`;
+      if(key==='weight') return `${key}: ${value}kg`;
+      if(key==='bust'){
+        const val = value as number;
+        if(val<30) return `small breast`;
+        if(val<40) return `medium breast`;
+        if(val<50) return `large breast`;
+        if(val<60) return `extra large breast`;
+        else return `super big giant breast`;
+      }
+      if(key==='waist') return `waist size: ${value}cm`;
+      if(key==='hips') return `hip size: ${value}cm`;
+      return "";
+    })
     .join(", ");
   
   // Construct the image generation prompt
   const prompt = `
-    A highly detailed portrait of ${name}, a ${age} female of ${ethnicity} origin.
+    A highly detailed portrait of ${name}, a ${age} year-old female of ${ethnicity} origin.
     she has ${hairColor} ${hairStyle}, ${eyeColor} eyes, a ${faceShape} face, and ${skinTone} skin. she has ${bodyfeaturesText}.
     she are wearing ${style} clothing.
     The image should be realistic, well-lit, and aesthetically pleasing.
