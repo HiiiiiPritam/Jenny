@@ -166,13 +166,32 @@ const CreateCharacter = () => {
       return;
     }
 
+    const bodyfeatures = character.bodyMeasurements || {};
+    const bodyfeaturesText = Object.entries(bodyfeatures)
+    .map(([key, value]) => {
+      if(key==='height') return `${key}: ${value}cm`;
+      if(key==='weight') return `${key}: ${value}kg`;
+      if(key==='bust'){
+        const val = value as number;
+        if(val<30) return `small breast`;
+        if(val<40) return `medium breast`;
+        if(val<50) return `large breast`;
+        if(val<60) return `extra large breast`;
+        else return `super big giant breast`;
+      }
+      if(key==='waist') return `waist size: ${value}cm`;
+      if(key==='hips') return `hip size: ${value}cm`;
+      return "";
+    })
+    .join(", ");
+
     // Ensure base personality & image prompts are meaningful
     const updatedCharacter = {
       ...character,
       basePersonalityPrompt: generatePersonalityPrompt(character),
       baseImagePrompt:
         character.baseImagePrompt ||
-        `A highly detailed portrait of ${character.name}, a ${character.age}-year-old individual of ${character.ethnicity} origin with ${character.skinTone} skin tone and ${character.hairColor} ${character.hairStyle} hair, ${character.eyeColor} eyes, and a ${character.faceShape} face.`,
+        `A highly detailed portrait of ${character.name}, a ${character.age}-year-old female of ${character.ethnicity} origin with ${character.skinTone} skin tone and ${character.hairColor} ${character.hairStyle} hair, ${character.eyeColor} eyes, and a ${character.faceShape} face. . she has ${bodyfeaturesText}.`,
       createdBy: session?.user.id,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
@@ -231,10 +250,13 @@ const CreateCharacter = () => {
           onChange={handleChange}
           className="w-full border rounded p-2"
         >
+          <option value="Anime">Anime</option>
           <option value="Caucasian">Caucasian</option>
           <option value="African">African</option>
           <option value="Asian">Asian</option>
           <option value="Hispanic">Hispanic</option>
+          <option value="Indian">Indian</option>
+          <option value="latina">latina</option>
           <option value="Mixed">Mixed</option>
         </select>
       </div>
@@ -284,6 +306,13 @@ const CreateCharacter = () => {
         >
           <option value="Short and Straight">Short and Straight</option>
           <option value="Long and Wavy">Long and Wavy</option>
+          <option value="Short and Wavy">Short and Wavy</option>
+          <option value="Long and Straight">Long and Straight</option>
+          <option value="Short and Curly">Short and Curly</option>
+          <option value="Long and Curly">Long and Curly</option>
+          <option value="Ponytail">Ponytail</option>
+          <option value="Bun">Bun</option>
+          <option value="Updo">Updo</option>
           <option value="Curly">Curly</option>
           <option value="Bald">Bald</option>
           <option value="Mohawk">Mohawk</option>
@@ -437,6 +466,11 @@ const CreateCharacter = () => {
           <option value="Streetwear">Streetwear</option>
           <option value="Punk">Punk</option>
           <option value="Modern and futuristic">Modern and futuristic</option>
+          <option value="Traditional Indian">Traditional Indian</option>
+          <option value="Traditional Chinese">Traditional Chinese</option>
+          <option value="Traditional Japanese">Traditional Japanese</option>
+          <option value="Vampiric">Vampiric</option>
+          <option value="Ninja">Ninja</option>
           <option value="Gothic">Gothic</option>
           <option value="Fantasy">Fantasy</option>
         </select>
@@ -456,6 +490,8 @@ const CreateCharacter = () => {
           <option value="stepsister who lusts for the user">step sister</option>
           <option value="horny neighbour">Neighbour</option>
           <option value="mysterious stranger">Stranger</option>
+          <option value="cousin">cousin</option>
+          <option value="ex-lover">ex lover</option>
           <option value="Fantasy world character">Fantasy</option>
         </select>
       </div>
