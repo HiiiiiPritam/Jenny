@@ -66,7 +66,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
               💬 My Chats
             </span>
           </Link>
-          <Link href="/dashboard/video">
+          {/* <Link href="/dashboard/video">
             <span
               className={`cursor-pointer p-2 rounded ${
                 active === "video" ? "bg-gray-700" : "hover:bg-gray-700"
@@ -77,6 +77,19 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
               }}
             >
               📽️ video gen
+            </span>
+          </Link> */}
+          <Link href="/dashboard/about">
+            <span
+              className={`cursor-pointer p-2 rounded ${
+                active === "about" ? "bg-gray-700" : "hover:bg-gray-700"
+              }`}
+              onClick={() => {
+                setActive("about");
+                setSidebarOpen(false);
+              }}
+            >
+             🧑🏻‍💻 About Us
             </span>
           </Link>
         </nav>
