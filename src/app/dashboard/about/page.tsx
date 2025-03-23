@@ -7,9 +7,9 @@ export default function AboutUs() {
   const router = useRouter();
 
   return (
-    <div className="bg-black h-[calc(100dvh-4rem)]  text-white  flex flex-col items-center justify-center px-6 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-darkPurple to-black h-[calc(100dvh-4rem)]  text-white  flex flex-col items-center justify-center px-6 relative overflow-auto">
       {/* Background Overlay */}
-      <div className="absolute max-h-[calc(100dvh-4rem)] inset-0 bg-gradient-to-br from-darkPurple to-black opacity-60"></div>
+      <div className="absolute  inset-0 bg-gradient-to-br from-darkPurple to-black opacity-60"></div>
 
       {/* Main Content Container */}
       <motion.div

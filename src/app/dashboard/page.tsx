@@ -101,7 +101,7 @@ const ExplorePage = () => {
         <h2 className="text-xl font-semibold text-white mt-3">
           {char.name}
         </h2>
-        <p className="text-gray-300">{char.description}</p>
+        <p className="text-gray-300 line-clamp-3 tolltip">{char.description}</p>
       </div>
       ))}
 
