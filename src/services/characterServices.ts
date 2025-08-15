@@ -9,31 +9,21 @@ export const generateImagePrompt = (character: any): string => {
   const faceShape = character.faceShape || "oval";
   const age = character.age ? `${character.age} years old` : "young adult";
   const style = character.style || "casual";
-  const bodyfeatures = character.bodyMeasurements || {};
-  const bodyfeaturesText = Object.entries(bodyfeatures)
+  const physicalAttrs = character.physicalAttributes || {};
+  const physicalText = Object.entries(physicalAttrs)
     .map(([key, value]) => {
       if(key==='height') return `${key}: ${value}cm`;
-      if(key==='weight') return `${key}: ${value}kg`;
-      if(key==='bust'){
-        const val = value as number;
-        if(val<30) return `small breast`;
-        if(val<40) return `medium breast`;
-        if(val<50) return `large breast`;
-        if(val<60) return `extra large breast`;
-        else return `super big giant breast`;
-      }
-      if(key==='waist') return `waist size: ${value}cm`;
-      if(key==='hips') return `hip size: ${value}cm`;
+      if(key==='build') return `${key}: ${value}`;
       return "";
     })
     .join(", ");
   
   // Construct the image generation prompt
   const prompt = `
-    A highly detailed portrait of ${name}, a ${age} year-old female of ${ethnicity} origin.
-    she has ${hairColor} ${hairStyle}, ${eyeColor} eyes, a ${faceShape} face, and ${skinTone} skin. she has ${bodyfeaturesText}.
-    she are wearing ${style} clothing.
-    The image should be realistic, well-lit, and aesthetically pleasing.
+    A professional portrait of ${name}, a ${age} person of ${ethnicity} origin.
+    They have ${hairColor} ${hairStyle}, ${eyeColor} eyes, a ${faceShape} face, and ${skinTone} skin. Physical build: ${physicalText}.
+    They are wearing ${style} clothing.
+    The image should be professional, well-lit, and presentable.
   `.trim();
 
   return prompt;
@@ -44,7 +34,7 @@ export const generatePersonalityPrompt = (character: any): string => {
   const personalityTraits = character.personalityTraits?.length
     ? character.personalityTraits.join(", ")
     : "balanced and well-rounded";
-  const relationshipType = character.relationshipType || "a friendly companion";
+  const assistantRole = character.assistantRole || "a helpful assistant";
   const hobbies = character.hobbies?.length
     ? character.hobbies.join(", ")
     : "various activities";
@@ -62,14 +52,14 @@ export const generatePersonalityPrompt = (character: any): string => {
     : "";
   const preferencesText = [likes, dislikes].filter(Boolean).join(" ");
 
-  const backgroundStory = character.backgroundStory || "They have an intriguing past, shaping her personality.";
+  const backgroundStory = character.backgroundStory || "They have an interesting background that shapes their personality.";
 
   // Construct the personality prompt
   const prompt = `
-    ${name} is ${relationshipType} with a personality that is best described as ${personalityTraits}.
+    ${name} is ${assistantRole} with a personality that is best described as ${personalityTraits}.
     They are passionate about ${hobbies} and have a deep interest in ${favoriteThings}.
     ${preferencesText} ${backgroundStory}
-    They are known for being engaging, thoughtful, and highly interactive in conversations.
+    They are known for being helpful, professional, and highly engaging in conversations.
   `.trim();
 
   return prompt;

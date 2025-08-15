@@ -45,18 +45,18 @@ const ImageGenerator = () => {
 
   return (
     <div className='h-full bg-amber-200'>
-      <h1>AI Girlfriend Image Generator</h1>
+      <h1>AI Assistant Image Generator</h1>
       <textarea
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
-        placeholder="Enter a description for your AI girlfriend"
+        placeholder="Enter a description for your AI assistant"
       />
       <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={handleGenerateImage} disabled={loading}>
         {loading ? 'Generating...' : 'Generate Image'}
       </button>
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {imageUrl && <img src={imageUrl} alt="Generated AI Girlfriend" />}
+      {imageUrl && <img src={imageUrl} alt="Generated AI Assistant" />}
     </div>
   );
 };

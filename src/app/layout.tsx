@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Jenny AI",
-  description: "AI Girlfriend",
+  title: "AI Companion Platform",
+  description: "Professional AI Assistant Platform",
 };
 
 export default function RootLayout({

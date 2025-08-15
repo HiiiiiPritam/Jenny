@@ -26,16 +26,16 @@ export default function LandingPage() {
         className="relative text-center z-10"
       >
         <h1 className="text-5xl font-extrabold text-matteRed drop-shadow-lg">
-          Your AI Girlfriend ❤️
+          Your AI Companion 🤖
         </h1>
         <p className="text-lg text-gray-300 mt-3 max-w-xl mx-auto">
-          The perfect companion, always there to chat, understand, and engage with you.
+          Intelligent AI assistants ready to help, learn, and engage with you professionally.
         </p>
 
         {/* AI Character Image */}
         <motion.img
           src={sophia.src}
-          alt="AI Girlfriend"
+          alt="AI Assistant"
           className="w-72 mx-auto my-6 rounded-lg shadow-lg"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -50,7 +50,7 @@ export default function LandingPage() {
             className="bg-matteRed text-white px-6 py-3 rounded-full text-lg shadow-lg transition-all hover:bg-red-700"
             onClick={() => router.push("/dashboard")}
           >
-            Chat Now 💬
+            Start Chatting 💬
           </motion.button>
 
           <motion.button
@@ -59,7 +59,7 @@ export default function LandingPage() {
             className="bg-darkPurple text-white px-6 py-3 rounded-full text-lg shadow-lg transition-all hover:bg-purple-700"
             onClick={() => router.push("/dashboard")}
           >
-            Create Character 🛠️
+            Create AI Assistant 🛠️
           </motion.button>
         </div>
       </motion.div>
@@ -106,9 +106,9 @@ export default function LandingPage() {
             className="p-6 bg-white/10 rounded-xl shadow-lg border border-white/20 text-center h-max"
           >
             <img src={customAI.src} alt="Custom AI" className="w-full rounded-lg mb-4 hover:scale-105 transition-transform ease-in-out" />
-            <h3 className="text-xl font-semibold">Create Your AI Companion</h3>
+            <h3 className="text-xl font-semibold">Create Your AI Assistant</h3>
             <p className="text-gray-300 text-sm mt-2">
-              Customize AI characters with unique personalities and chat styles.
+              Customize AI assistants with unique personalities and professional communication styles.
             </p>
           </motion.div>
         </div>

@@ -16,21 +16,18 @@ export interface ICharacter extends Document {
   faceShape?: string;
   facialFeatures?: Record<string, any>;
 
-  // Body Measurements
-  bodyMeasurements?: {
-    bust?: number;
-    waist?: number;
-    hips?: number;
+  // Physical Attributes
+  physicalAttributes?: {
     height?: number;
-    weight?: number;
+    build?: string; // e.g., "slim", "athletic", "average"
   };
 
   age?: number;
 
-  // Personality & Relationship
+  // Personality & Role
   personality?: Record<string, any>;
   personalityTraits?: string[];
-  relationshipType?: string;
+  assistantRole?: string; // e.g., "companion", "assistant", "mentor"
 
   // Media Generation Settings
   imagePrompt?: string; // Dynamic image prompt (for extra details)
@@ -71,21 +68,18 @@ const CharacterSchema: Schema = new Schema<ICharacter>(
     faceShape: { type: String },
     facialFeatures: { type: Schema.Types.Mixed },
 
-    // Body Measurements
-    bodyMeasurements: {
-      bust: { type: Number },
-      waist: { type: Number },
-      hips: { type: Number },
+    // Physical Attributes
+    physicalAttributes: {
       height: { type: Number },
-      weight: { type: Number },
+      build: { type: String },
     },
 
     age: { type: Number },
 
-    // Personality & Relationship
+    // Personality & Role
     personality: { type: Schema.Types.Mixed },
     personalityTraits: { type: [String] },
-    relationshipType: { type: String },
+    assistantRole: { type: String },
 
     // Media Generation Settings
     imagePrompt: { type: String },
