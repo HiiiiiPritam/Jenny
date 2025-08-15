@@ -63,7 +63,6 @@ const ExplorePage = () => {
   };
 
   return (
-    
     <div className="bg-black text-white flex flex-col h-[calc(100dvh-4rem)]  overflow-hidden px-6 relative ">
     {/* Background Gradient Overlay */}
     <div className="absolute inset-0 bg-gradient-to-br from-darkPurple to-black opacity-60"></div>
@@ -78,11 +77,7 @@ const ExplorePage = () => {
       transition={{ duration: 1 }}
       className="text-5xl font-extrabold text-matteRed drop-shadow-lg text-center z-10"
     >
-<<<<<<< HEAD
-      Explore AI Assistants
-=======
       Explore AI Characters
->>>>>>> fd0a54d66207ad32ff92eb4928559ba603c69041
     </motion.h1>
 
     {/* Character Grid */}
