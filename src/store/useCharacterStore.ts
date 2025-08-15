@@ -26,11 +26,7 @@ export interface Character {
   voiceModel?: string;
   basePersonalityPrompt?: string;
   baseImagePrompt?: string;
-  hobbies?: string[];
   favoriteThings?: string[];
-  backgroundStory?: string;
-  style?: string;
-  preferences?: Record<string, any>;
   virtualPersona?: string;
   createdAt: string;
   updatedAt: string;

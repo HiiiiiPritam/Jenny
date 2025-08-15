@@ -78,7 +78,11 @@ const ExplorePage = () => {
       transition={{ duration: 1 }}
       className="text-5xl font-extrabold text-matteRed drop-shadow-lg text-center z-10"
     >
+<<<<<<< HEAD
       Explore AI Assistants
+=======
+      Explore AI Characters
+>>>>>>> fd0a54d66207ad32ff92eb4928559ba603c69041
     </motion.h1>
 
     {/* Character Grid */}
