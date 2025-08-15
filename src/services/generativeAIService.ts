@@ -18,7 +18,7 @@ export const generateBotReply = async (
 
   console.log("context", context);
   
-  const prompt = `Responses should be less than 15 words. Act as the character mentioned below. ${baseprompt}.\n:${context}\nUser: ${userMessage}\nBot:`;
+  const prompt = `Responses should be less than 15 words. Act as a helpful AI assistant with the personality described below. ${baseprompt}.\n:${context}\nUser: ${userMessage}\nAssistant:`;
 
   try {
     const response = await cohere.chat({

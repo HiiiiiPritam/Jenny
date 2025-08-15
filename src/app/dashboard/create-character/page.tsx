@@ -29,13 +29,10 @@ const CreateCharacter = () => {
     faceShape: "Oval",
     facialFeatures: { freckles: false, dimples: false },
 
-    // Body Measurements
-    bodyMeasurements: {
-      bust: 34,
-      waist: 26,
-      hips: 36,
+    // Physical Attributes
+    physicalAttributes: {
       height: 165,
-      weight: 55,
+      build: "average",
     },
 
     age: 22,
@@ -49,7 +46,7 @@ const CreateCharacter = () => {
       neuroticism: 3,
     },
     personalityTraits: [],
-    relationshipType: "friend",
+    assistantRole: "companion",
 
     // AI Attributes
     imagePrompt: "",
@@ -166,21 +163,11 @@ const CreateCharacter = () => {
       return;
     }
 
-    const bodyfeatures = character.bodyMeasurements || {};
-    const bodyfeaturesText = Object.entries(bodyfeatures)
+    const physicalAttrs = character.physicalAttributes || {};
+    const physicalText = Object.entries(physicalAttrs)
     .map(([key, value]) => {
       if(key==='height') return `${key}: ${value}cm`;
-      if(key==='weight') return `${key}: ${value}kg`;
-      if(key==='bust'){
-        const val = value as number;
-        if(val<30) return `small breast`;
-        if(val<40) return `medium breast`;
-        if(val<50) return `large breast`;
-        if(val<60) return `extra large breast`;
-        else return `super big giant breast`;
-      }
-      if(key==='waist') return `waist size: ${value}cm`;
-      if(key==='hips') return `hip size: ${value}cm`;
+      if(key==='build') return `${key}: ${value}`;
       return "";
     })
     .join(", ");
@@ -191,7 +178,7 @@ const CreateCharacter = () => {
       basePersonalityPrompt: generatePersonalityPrompt(character),
       baseImagePrompt:
         character.baseImagePrompt ||
-        `A highly detailed portrait of ${character.name}, a ${character.age}-year-old female of ${character.ethnicity} origin with ${character.skinTone} skin tone and ${character.hairColor} ${character.hairStyle} hair, ${character.eyeColor} eyes, and a ${character.faceShape} face. . she has ${bodyfeaturesText}.`,
+        `A professional portrait of ${character.name}, a ${character.age}-year-old person of ${character.ethnicity} origin with ${character.skinTone} skin tone and ${character.hairColor} ${character.hairStyle} hair, ${character.eyeColor} eyes, and a ${character.faceShape} face. Physical build: ${physicalText}.`,
       createdBy: session?.user.id,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
@@ -392,20 +379,20 @@ const CreateCharacter = () => {
       {/* Body Measurements */}
       <div className="mb-6">
         <label className="block text-sm font-semibold mb-2">
-          Body Measurements (cm/kg)
+          Physical Attributes
         </label>
         <div className="grid grid-cols-2 gap-4">
-          {Object.entries(character.bodyMeasurements).map(([key, value]) => (
+          {Object.entries(character.physicalAttributes).map(([key, value]) => (
             <div key={key}>
               <label className="block text-xs text-gray-400">{key}</label>
               <input
-                type="number"
+                type={key === "height" ? "number" : "text"}
                 value={value}
                 onChange={(e) =>
                   handleNestedChange(
-                    "bodyMeasurements",
+                    "physicalAttributes",
                     key,
-                    parseInt(e.target.value)
+                    key === "height" ? parseInt(e.target.value) : e.target.value
                   )
                 }
                 className=" border rounded p-2 w-full"
@@ -478,21 +465,21 @@ const CreateCharacter = () => {
 
       {/* relationship Type */}
       <div className="mb-4">
-        <label className="block font-semibold">Reationship:</label>
+        <label className="block font-semibold">Assistant Role:</label>
         <select
-          name="relationshipType"
-          value={character.relationshipType}
+          name="assistantRole"
+          value={character.assistantRole}
           onChange={handleChange}
           className="w-full border rounded p-2"
         >
-          <option value="friend">Friend</option>
-          <option value="horny girlfriend">girlfriend</option>
-          <option value="stepsister who lusts for the user">step sister</option>
-          <option value="horny neighbour">Neighbour</option>
-          <option value="mysterious stranger">Stranger</option>
-          <option value="cousin">cousin</option>
-          <option value="ex-lover">ex lover</option>
-          <option value="Fantasy world character">Fantasy</option>
+          <option value="companion">Friendly Companion</option>
+          <option value="mentor">Mentor & Guide</option>
+          <option value="tutor">Learning Tutor</option>
+          <option value="consultant">Professional Consultant</option>
+          <option value="assistant">Personal Assistant</option>
+          <option value="counselor">Supportive Counselor</option>
+          <option value="coach">Life Coach</option>
+          <option value="researcher">Research Assistant</option>
         </select>
       </div>
 

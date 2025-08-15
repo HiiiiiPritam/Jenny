@@ -30,8 +30,8 @@ export default function AboutUs() {
         >
           <h2 className="text-2xl font-semibold text-white">About the Project</h2>
           <p className="text-gray-300 text-md mt-2">
-            Our AI Girlfriend project is designed to provide engaging and meaningful conversations using cutting-edge AI models. 
-            Users can create unique AI characters, chat in real-time, and even use images to enhance conversations. I know there might be several bugs in the project, this is just a side project that i made for fun so please forgive me for your inconvenience, you may inform me about any issues you come across. Lots of Love ❤️
+            Our AI Assistant Platform is designed to provide professional, helpful, and engaging conversations using cutting-edge AI models. 
+            Users can create unique AI assistants with different personalities and expertise areas, chat in real-time, and even use images to enhance conversations. This platform demonstrates modern web development practices and AI integration capabilities.
           </p>
         </motion.div>
 
@@ -42,7 +42,7 @@ export default function AboutUs() {
         >
           <h2 className="text-2xl font-semibold text-white">About the Developer</h2>
           <p className="text-gray-300 text-md mt-2">
-            Hi, I am Pritam a second year Computer Science Undergrad and the creator of Jenny AI. I am passionate about AI, full-stack development and CS in general.
+            Hi, I am Pritam a second year Computer Science Undergrad and the creator of this AI Assistant Platform. I am passionate about AI, full-stack development and CS in general.
             Feel free to connect with me!
           </p>
 
