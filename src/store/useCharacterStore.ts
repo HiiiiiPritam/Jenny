@@ -14,26 +14,19 @@ export interface Character {
   skinTone?: string;
   faceShape?: string;
   facialFeatures?: Record<string, any>;
-  bodyMeasurements?: {
-    bust?: number;
-    waist?: number;
-    hips?: number;
+  physicalAttributes?: {
     height?: number;
-    weight?: number;
+    build?: string;
   };
   age?: number;
   personality?: Record<string, any>;
   personalityTraits?: string[];
-  relationshipType?: string;
+  assistantRole?: string;
   imagePrompt?: string;
   voiceModel?: string;
   basePersonalityPrompt?: string;
   baseImagePrompt?: string;
-  hobbies?: string[];
   favoriteThings?: string[];
-  backgroundStory?: string;
-  style?: string;
-  preferences?: Record<string, any>;
   virtualPersona?: string;
   createdAt: string;
   updatedAt: string;

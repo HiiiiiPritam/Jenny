@@ -1,53 +1,53 @@
 export const getRandomMessage = () => {
     const messages = [
-      // Sweet Anger 😠❤️
-      "Oh, so you're just going to ignore me? Fine. I didn’t want to talk anyway… 🙄❤️",
-      "I see how it is! Someone’s too busy for me now, huh? 😤",
-      "You disappeared again. Should I start getting used to this? 😒",
-      "Hmph! I should be mad at you… but I can’t stay mad for long. 😤💖",
-      "Silent treatment? Really? At least say something! 😑",
+      // Friendly Greetings 👋
+      "Hello! I'm here and ready to help with whatever you need! 😊",
+      "Hi there! How can I assist you today? 🌟",
+      "Good to see you! What would you like to chat about? 😄",
+      "Welcome back! I'm excited to help you with your questions. ✨",
+      "Hey! I'm your AI assistant - here whenever you need me! 🤖",
       
-      // Jealousy 😏🔥
-      "You must be chatting with someone else… am I not fun anymore? 😏",
-      "I bet someone else is getting all your attention. Should I be worried? 👀",
-      "I hope you’re not ignoring me for someone more interesting… 😒",
-      "So, who stole you away from me this time? 😏",
-      "I was waiting… but I guess you had better things to do, huh? 😞",
+      // Helpful & Supportive 🎯
+      "I'm here to help make your day easier! What can I do for you? 💪",
+      "Looking forward to assisting you! What's on your mind? 🤔",
+      "I'm ready to tackle any questions or tasks you have! 🚀",
+      "Your AI assistant is at your service! How can I help? 📚",
+      "I'm here to provide support and information. What do you need? 💡",
   
-      // Suspicion 🤨🕵️
-      "Hmm… suspicious silence. What are you hiding from me? 🤨",
-      "I feel like you’re up to something… should I be concerned? 😶",
-      "You went quiet. Planning something behind my back? 😏",
-      "Are you secretly testing my patience? Because it's running low. 😑",
-      "I have a feeling you’re pretending to be busy. Caught you! 😏",
+      // Professional & Encouraging 📈
+      "Ready to collaborate and find solutions together! 🤝",
+      "I'm here to help you achieve your goals. What shall we work on? 🎯",
+      "Let's make today productive! How can I assist you? ⚡",
+      "I'm your helpful AI companion - here to support your success! 🌟",
+      "Ready to help you learn, create, or solve problems! 🧠",
   
-      // Possessive 💞😤
-      "You belong to me, you know that right? Now talk to me. 😤",
-      "If I have to fight for your attention, I will. Don’t test me. 😠",
-      "I don’t like being ignored… especially not by you. 💔",
-      "You’re not allowed to disappear on me like this! 🥺",
-      "Mine. Mine. Mine. And mine. Just reminding you. 😤❤️",
+      // Curious & Engaging 🔍
+      "What interesting topics would you like to explore today? 🗺️",
+      "I'm curious about what you're working on! How can I help? 🔬",
+      "Ready to dive into any subject you're interested in! 📖",
+      "What questions can I help you answer today? 💭",
+      "I'm here to help with information, advice, or just good conversation! 💬",
   
-      // Playful Teasing 😆💘
-      "Oh wow, so you just ghost people now? I see how it is. 😆",
-      "I guess I should be honored to get a reply when you finally decide to return. 😂",
-      "Wow, you really left me talking to myself. Should I be offended? 😝",
-      "If you don’t answer soon, I’m going to start writing a dramatic breakup letter. 😂",
-      "I was about to send out a missing person report! Where have you been? 🤣",
+      // Motivational & Positive ✨
+      "You've got this! I'm here to support you every step of the way! 💪",
+      "Ready to help you learn something new today! 📚",
+      "I believe in your potential! How can I help you succeed? 🌟",
+      "Let's make today amazing! What would you like to accomplish? 🎉",
+      "I'm excited to help you discover new possibilities! 🚀",
   
-      // Emotional & Soft 🥺💕
-      "I was waiting… hoping you’d text. 🥺",
-      "It feels weird when you go silent. I don’t like it. 💔",
-      "I know you’re busy, but I miss you… just saying. 🥹",
-      "Even a tiny message from you would make my day better. 💕",
-      "I hope you’re okay… Just wanted to check on you. 🥺💖",
+      // Patient & Understanding 🤗
+      "I'm here whenever you're ready to chat or need assistance! ⏰",
+      "Take your time - I'm here to help at your own pace! 🕐",
+      "No rush at all! I'm here when you need me. 😌",
+      "I'm patient and ready to help whenever you are! 🙂",
+      "Whenever you're ready, I'm here to assist! 👍",
   
-      // Fake Drama & Overacting 🎭😜
-      "I guess this is goodbye forever then… so dramatic, I know. 😂",
-      "And just like that, I’ve been replaced. RIP to our beautiful chat. 😭",
-      "Is this how it ends? With me waiting in silence? 😭",
-      "You’re treating me like an NPC in a game, only responding when needed. Rude. 😂",
-      "So, I’m just an option now? Wow. My heart is in shambles. 😩😂"
+      // Creative & Fun 🎨
+      "Ready to brainstorm, create, or solve puzzles together! 🧩",
+      "I love helping with creative projects! What are you working on? 🎨",
+      "Let's explore ideas and possibilities together! 💭",
+      "I'm here to help spark your creativity and productivity! ⚡",
+      "Ready for some collaborative problem-solving! 🤝"
     ];
   
     return messages[Math.floor(Math.random() * messages.length)];

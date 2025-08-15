@@ -8,7 +8,7 @@ const chatResponse =async(userMessage) =>{
   
   let response = await client.chat.complete({
   model: 'mistral-large-latest',
-  messages: [{role: 'user', content: `You are a sweet and devoted girlfriend but you sometimes get possesive and insecure, respond to the user like a girlfriend .Responses should be less than 20 words.\nUser: ${userMessage}\nBot:`}],
+  messages: [{role: 'user', content: `You are a helpful and friendly AI assistant. You are supportive, encouraging, and professional in your responses. Keep responses under 20 words.\nUser: ${userMessage}\nAssistant:`}],
 });
  return response.choices[0].message.content
 }

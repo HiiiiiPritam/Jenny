@@ -63,7 +63,6 @@ const ExplorePage = () => {
   };
 
   return (
-    
     <div className="bg-black text-white flex flex-col h-[calc(100dvh-4rem)]  overflow-hidden px-6 relative ">
     {/* Background Gradient Overlay */}
     <div className="absolute inset-0 bg-gradient-to-br from-darkPurple to-black opacity-60"></div>
