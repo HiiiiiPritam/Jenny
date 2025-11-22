@@ -24,21 +24,24 @@ const ChatPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!userId || !chatId) return; // ✅ Ensure valid data before fetching
+    if (!chatId || !userId) return;
 
-    if (!chatId || !session?.user?.id) return;
-    setLoading(true)
-
-    // Ensure chats are loaded first, then select the chat
-    const fetchAndSelectChat = async () => {
-      // await fetchUserChats({ userID: session.user.id }); // Wait for chats
-      await selectChat(chatId).then(()=>setLoading(false)); // Now select chat when state is updated
+    const initChat = async () => {
+      setLoading(true);
+      try {
+        // We don't need to fetch all chats here if we just want to select one
+        // But if we need the chat metadata (name, icon), we might need to ensure it's loaded.
+        // For now, assuming the store might already have chats or selectChat handles it.
+        await selectChat(chatId);
+      } catch (error) {
+        console.error("Failed to initialize chat:", error);
+      } finally {
+        setLoading(false);
+      }
     };
-    
-    
-    fetchAndSelectChat();
-    
-  }, [userId, chatId, fetchUserChats, selectChat]);
+
+    initChat();
+  }, [chatId, userId, selectChat]);
 
   if (status === "loading") {
     return (

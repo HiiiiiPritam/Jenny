@@ -22,7 +22,7 @@ export const generateBotReply = async (
 
   try {
     const response = await cohere.chat({
-      model: "command-r-plus",
+      model: "command-a-03-2025",
       messages: [
         {
           role: "user",

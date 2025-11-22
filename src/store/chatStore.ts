@@ -39,43 +39,51 @@ export const useChatStore = create<ChatState>((set, get) => ({
   fetchUserChats: async ({ userID }: { userID: string }) => {
     try {
       const response = await fetch(`/api/chat/user/${userID}`);
-      const data: Chat[] = await response.json();
-      console.log("chats data", data);
-
-      set({ chats: data });
+      if (!response.ok) throw new Error("Failed to fetch chats");
+      
+      const data = await response.json();
+      
+      if (Array.isArray(data)) {
+        set({ chats: data });
+      } else {
+        console.error("Fetched chats data is not an array:", data);
+        set({ chats: [] });
+      }
     } catch (error) {
       console.error("Error fetching chats:", error);
+      set({ chats: [] });
     }
   },
 
   // Select a chat and load its messages
   selectChat: async (chatId) => {
-    const { chats } = get();
+    const { chats, selectedChatId } = get();
 
-    // console.log("Current chats:", chats); // ✅ Debug current chats
-    // console.log("Looking for chat with ID:", chatId); // ✅ Debug chatId
+    // If already selected, don't re-fetch unless forced (logic can be added later)
+    if (selectedChatId === chatId) return;
 
-    const chat = chats.find((c) => String(c._id) === String(chatId)) || null; // ✅ Ensure type match
-
-    // console.log("Selected chat:", chat); // ✅ Debug selected chat
+    const chat = chats.find((c) => String(c._id) === String(chatId)) || null;
 
     if (!chat) {
-      console.error(`Chat with ID ${chatId} not found in state`);
-      return;
+      console.warn(`Chat with ID ${chatId} not found in local state, fetching...`);
+      // Optional: Fetch single chat if not found in list (omitted for now to stick to plan)
     }
 
     try {
-      const response = await fetch(`/api/chat/message/${chatId}`);
-      const data: any = await response.json();
-      console.log("chat in selectcchat", chatId, "is", chat);
+      // Optimistic update or just set the chat object first
+      set({ selectedChat: chat, selectedChatId: chatId, messages: [] });
 
+      const response = await fetch(`/api/chat/message/${chatId}`);
+      if (!response.ok) throw new Error("Failed to fetch messages");
+      
+      const data = await response.json();
+      
       set({
-        selectedChat: chat,
-        selectedChatId: chatId,
-        messages: data.messages,
+        messages: data.messages || [],
       });
     } catch (error) {
-      console.error("Error fetching chats:", error);
+      console.error("Error fetching chat messages:", error);
+      set({ messages: [] });
     }
   },
 

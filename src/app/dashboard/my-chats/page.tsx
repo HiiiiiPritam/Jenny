@@ -125,7 +125,7 @@ const MyChats = () => {
               },
             }}
           >
-            {chats.map((chat, index) => (
+            {Array.isArray(chats) && chats.map((chat, index) => (
               <motion.div
                 key={chat._id}
                 onClick={() => router.push(`/dashboard/my-chats/${chat._id}`)}

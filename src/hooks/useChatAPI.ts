@@ -12,7 +12,9 @@ const useChatAPI = (chatId: string) => {
   const [isTyping, setIsTyping] = useState(false);
   const chatContainerRef = useRef<HTMLDivElement | null>(null);
 
-  // Load messages when chatId changes
+  // Load messages when chatId changes - REMOVED to avoid double fetching
+  // The page component is responsible for initializing the chat via selectChat
+  /*
   useEffect(() => {
     if (!chatId) return;
 
@@ -29,6 +31,7 @@ const useChatAPI = (chatId: string) => {
 
     loadMessages();
   }, [chatId]);
+  */
 
   const sendMessage = async ({ userMessage, isImage = false }: { userMessage: string; isImage?: boolean }): Promise<void> => {
     let userMsg: Message = {
