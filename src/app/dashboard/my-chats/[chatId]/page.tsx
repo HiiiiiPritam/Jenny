@@ -10,6 +10,8 @@ import ChatInput from "@/components/ChatInput";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import { useSession } from "next-auth/react";
 
+import CallOverlay from "@/components/CallOverlay";
+
 const ChatPage = () => {
   const params = useParams();
   const router = useRouter();
@@ -19,9 +21,10 @@ const ChatPage = () => {
   const userId = session?.user?.id;
 
   const { messages, sendMessage, chatContainerRef, isTyping } = useChatAPI(chatId);
-  const { selectChat, chats, fetchUserChats } = useChatStore();
+  const { selectChat, chats, fetchUserChats, selectedChat } = useChatStore();
 
   const [loading, setLoading] = useState(true);
+  const [isCallOpen, setIsCallOpen] = useState(false);
 
   useEffect(() => {
     if (!chatId || !userId) return;
@@ -29,9 +32,6 @@ const ChatPage = () => {
     const initChat = async () => {
       setLoading(true);
       try {
-        // We don't need to fetch all chats here if we just want to select one
-        // But if we need the chat metadata (name, icon), we might need to ensure it's loaded.
-        // For now, assuming the store might already have chats or selectChat handles it.
         await selectChat(chatId);
       } catch (error) {
         console.error("Failed to initialize chat:", error);
@@ -63,7 +63,7 @@ const ChatPage = () => {
     <div className="flex flex-col h-[calc(100dvh-4rem)] bg-gradient-to-br from-darkPurple to-black relative overflow-hidden">
       {/* Header with back button */}
       <motion.div 
-        className="flex items-center p-4 bg-black/30 backdrop-blur-sm border-b border-purple-500/30"
+        className="flex items-center justify-between p-4 bg-black/30 backdrop-blur-sm border-b border-purple-500/30"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
@@ -78,6 +78,19 @@ const ChatPage = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
           Back to My Chats
+        </motion.button>
+
+        {/* Phone Call Button */}
+        <motion.button
+          onClick={() => setIsCallOpen(true)}
+          className="p-2 bg-green-600/20 text-green-400 rounded-full border border-green-500/30 hover:bg-green-600/30 transition-all duration-200"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          title="Start Call"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
         </motion.button>
       </motion.div>
 
@@ -95,9 +108,21 @@ const ChatPage = () => {
           
           {/* Chat input area */}
           <div className="flex-shrink-0">
-            <ChatInput onSend={(userMessage, isImage) => sendMessage({ userMessage, isImage })} isTyping={isTyping} />
+            <ChatInput onSend={(userMessage, isImage, isVoiceEnabled) => sendMessage({ userMessage, isImage, isVoiceEnabled })} isTyping={isTyping} />
           </div>
         </div>
+      )}
+
+      {/* Phone Call Overlay */}
+      {selectedChat && (
+        <CallOverlay
+          isOpen={isCallOpen}
+          onClose={() => setIsCallOpen(false)}
+          character={selectedChat.character}
+          onSendMessage={async (text) => {
+             return await sendMessage({ userMessage: text, isVoiceEnabled: false });
+          }}
+        />
       )}
     </div>
   );
