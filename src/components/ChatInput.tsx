@@ -90,8 +90,8 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
         )}
         
         {/* Main Input Area */}
-        <div className="flex items-end gap-3">
-          <div className="flex-1 relative">
+        <div className="flex flex-col md:flex-row items-end gap-3">
+          <div className="flex-1 relative w-full">
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -99,7 +99,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
               className={`w-full bg-gray-800/50 text-white rounded-xl px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-gray-700 resize-none transition-all duration-200 ${
                 isImageUploading ? "opacity-50 cursor-not-allowed" : ""
               }`}
-              placeholder="Type a message... (Press Enter to send, Shift+Enter for new line)"
+              placeholder="Type a message..."
               disabled={isImageUploading}
               rows={1}
               style={{
@@ -117,94 +117,96 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
           </div>
           
           {/* Action Buttons */}
-          <div className="flex gap-2">
-            {/* Image Upload */}
-            <label className={`relative group cursor-pointer ${
-              isImageUploading ? "opacity-50 cursor-not-allowed" : ""
-            }`}>
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleFileChange}
+          <div className="flex gap-2 w-full md:w-auto justify-between md:justify-start overflow-x-auto pb-1 md:pb-0">
+            <div className="flex gap-2">
+              {/* Image Upload */}
+              <label className={`relative group cursor-pointer flex-shrink-0 ${
+                isImageUploading ? "opacity-50 cursor-not-allowed" : ""
+              }`}>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  disabled={isImageUploading}
+                  className="hidden"
+                />
+                <div className="p-3 bg-gray-700 hover:bg-gray-600 rounded-xl transition-all duration-200 border border-gray-600 group-hover:border-purple-500 group-hover:text-purple-400 text-white">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </label>
+              
+              {/* Voice Response Toggle */}
+              <motion.button
+                onClick={() => setIsVoiceEnabled(!isVoiceEnabled)}
                 disabled={isImageUploading}
-                className="hidden"
-              />
-              <div className="p-3 bg-gray-700 hover:bg-gray-600 rounded-xl transition-all duration-200 border border-gray-600 group-hover:border-purple-500 group-hover:text-purple-400 text-white">
+                className={`p-3 rounded-xl transition-all duration-200 border flex-shrink-0 ${
+                  isVoiceEnabled 
+                    ? "bg-pink-600 hover:bg-pink-700 border-pink-500" 
+                    : "bg-gray-700 hover:bg-gray-600 border-gray-600"
+                } text-white ${
+                  isImageUploading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                title={isVoiceEnabled ? "Disable Voice Response" : "Enable Voice Response"}
+              >
+                {isVoiceEnabled ? (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                  </svg>
+                )}
+              </motion.button>
+
+              {/* Speech to Text */}
+              <motion.button
+                onClick={isListening ? stopListening : startListening}
+                disabled={isImageUploading}
+                className={`p-3 rounded-xl transition-all duration-200 border flex-shrink-0 ${
+                  isListening 
+                    ? "bg-red-600 hover:bg-red-700 border-red-500" 
+                    : "bg-green-600 hover:bg-green-700 border-green-500"
+                } text-white ${
+                  isImageUploading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+              </motion.button>
+              
+              {/* Image Generation Toggle */}
+              <motion.button
+                onClick={() => setGenerateImage(!generateImage)}
+                disabled={isImageUploading}
+                className={`p-3 rounded-xl transition-all duration-200 border flex-shrink-0 ${
+                  generateImage 
+                    ? "bg-purple-600 hover:bg-purple-700 border-purple-500" 
+                    : "bg-gray-700 hover:bg-gray-600 border-gray-600"
+                } text-white ${
+                  isImageUploading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-              </div>
-            </label>
-            
-            {/* Voice Response Toggle */}
-            <motion.button
-              onClick={() => setIsVoiceEnabled(!isVoiceEnabled)}
-              disabled={isImageUploading}
-              className={`p-3 rounded-xl transition-all duration-200 border ${
-                isVoiceEnabled 
-                  ? "bg-pink-600 hover:bg-pink-700 border-pink-500" 
-                  : "bg-gray-700 hover:bg-gray-600 border-gray-600"
-              } text-white ${
-                isImageUploading ? "opacity-50 cursor-not-allowed" : ""
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              title={isVoiceEnabled ? "Disable Voice Response" : "Enable Voice Response"}
-            >
-              {isVoiceEnabled ? (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                </svg>
-              ) : (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                </svg>
-              )}
-            </motion.button>
-
-            {/* Speech to Text */}
-            <motion.button
-              onClick={isListening ? stopListening : startListening}
-              disabled={isImageUploading}
-              className={`p-3 rounded-xl transition-all duration-200 border ${
-                isListening 
-                  ? "bg-red-600 hover:bg-red-700 border-red-500" 
-                  : "bg-green-600 hover:bg-green-700 border-green-500"
-              } text-white ${
-                isImageUploading ? "opacity-50 cursor-not-allowed" : ""
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-              </svg>
-            </motion.button>
-            
-            {/* Image Generation Toggle */}
-            <motion.button
-              onClick={() => setGenerateImage(!generateImage)}
-              disabled={isImageUploading}
-              className={`p-3 rounded-xl transition-all duration-200 border ${
-                generateImage 
-                  ? "bg-purple-600 hover:bg-purple-700 border-purple-500" 
-                  : "bg-gray-700 hover:bg-gray-600 border-gray-600"
-              } text-white ${
-                isImageUploading ? "opacity-50 cursor-not-allowed" : ""
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </motion.button>
+              </motion.button>
+            </div>
             
             {/* Send Button */}
             <motion.button
               onClick={handleSend}
               disabled={!input.trim() || isImageUploading}
-              className={`p-3 rounded-xl transition-all duration-200 ${
+              className={`p-3 rounded-xl transition-all duration-200 flex-shrink-0 ${
                 input.trim() && !isImageUploading
                   ? "bg-blue-600 hover:bg-blue-700 border-blue-500" 
                   : "bg-gray-700 border-gray-600 opacity-50 cursor-not-allowed"

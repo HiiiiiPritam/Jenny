@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // Importing menu icons
+import RealGirlfriendToggle from "@/components/RealGirlfriendToggle";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const [active, setActive] = useState("explore");
@@ -89,10 +90,12 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
                 setSidebarOpen(false);
               }}
             >
-             🧑🏻‍💻 About Us
+              🧑🏻‍💻 About Us
             </span>
           </Link>
         </nav>
+        
+        <RealGirlfriendToggle />
       </aside>
 
       {/* Main Content */}

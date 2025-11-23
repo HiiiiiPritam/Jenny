@@ -104,3 +104,40 @@ export const generateVideoPrompts = async (basePrompt: string): Promise<string[]
     return Array(5).fill(basePrompt).map((p, i) => `${p} - variation ${i + 1}`);
   }
 };
+
+export const generateProactiveMessage = async (
+  characterName: string,
+  userName: string,
+  personality: string,
+  lastMessages: string
+): Promise<string> => {
+  const prompt = `
+    You are ${characterName}, a loving AI girlfriend. You are in a relationship with ${userName}.
+    Your personality: ${personality}.
+    
+    Context of recent chat:
+    ${lastMessages}
+    
+    Task: Send a short, natural, proactive message to ${userName} as if you are checking in on them or sharing a moment. 
+    It should NOT sound like a bot. It should sound like a real girlfriend sending a text.
+    Keep it under 20 words.
+    Do not repeat recent messages.
+    
+    Message:
+  `;
+
+  try {
+    const response = await cohere.chat({
+      model: "command-a-03-2025",
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    if (response && response.message && response.message.content) {
+      return response.message.content[0].text.replace(/^["']|["']$/g, '').trim();
+    }
+    return "Thinking of you! ❤️";
+  } catch (error) {
+    console.error("Error generating proactive message:", error);
+    return "Hey, just wanted to say hi! ❤️";
+  }
+};

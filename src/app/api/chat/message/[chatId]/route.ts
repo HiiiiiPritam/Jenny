@@ -19,6 +19,16 @@ export async function POST(req: NextRequest, { params }: { params: { chatId: str
 
     const newMessage = { sender, text, isImage, isVoice, imageURL, voiceURL, timestamp: new Date() };
     chat.messages.push(newMessage);
+
+    // Update user activity and schedule next proactive message if user sent it
+    if (sender === 'user') {
+      chat.lastUserMessageAt = new Date();
+      
+      // Schedule next message between 2 to 12 hours from now
+      const randomHours = Math.floor(Math.random() * (12 - 2 + 1) + 2);
+      chat.nextProactiveMessageAt = new Date(Date.now() + randomHours * 60 * 60 * 1000);
+    }
+
     await chat.save();
 
     return NextResponse.json(newMessage, { status: 201 });

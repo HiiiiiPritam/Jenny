@@ -30,26 +30,6 @@ const ChatBox: React.FC<ChatBoxProps> = ({ messages, chatContainerRef, isTyping}
 
   return (
     <div className="flex flex-col h-full">
-      {/* Chat Header */}
-      <motion.div 
-        className="flex items-center gap-4 p-4 bg-gradient-to-r from-purple-900/50 to-black/50 backdrop-blur-sm border-b border-purple-500/30 rounded-t-xl"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="relative">
-          <img 
-            className="w-12 h-12 rounded-full border-2 border-matteRed shadow-lg" 
-            src={character.profilePicture} 
-            alt={character.name}
-          />
-          <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
-        </div>
-        <div>
-          <h3 className="text-white font-bold text-lg">{character.name}</h3>
-          <p className="text-gray-400 text-sm">AI Assistant</p>
-        </div>
-      </motion.div>
       
       {/* Messages Container */}
       <div
