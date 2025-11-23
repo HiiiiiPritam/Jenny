@@ -12,7 +12,9 @@ const useChatAPI = (chatId: string) => {
   const [isTyping, setIsTyping] = useState(false);
   const chatContainerRef = useRef<HTMLDivElement | null>(null);
 
-  // Load messages when chatId changes
+  // Load messages when chatId changes - REMOVED to avoid double fetching
+  // The page component is responsible for initializing the chat via selectChat
+  /*
   useEffect(() => {
     if (!chatId) return;
 
@@ -29,8 +31,9 @@ const useChatAPI = (chatId: string) => {
 
     loadMessages();
   }, [chatId]);
+  */
 
-  const sendMessage = async ({ userMessage, isImage = false }: { userMessage: string; isImage?: boolean }): Promise<void> => {
+  const sendMessage = async ({ userMessage, isImage = false, isVoiceEnabled = false }: { userMessage: string; isImage?: boolean; isVoiceEnabled?: boolean }): Promise<string | void> => {
     let userMsg: Message = {
       sender: "user",
       text: userMessage,
@@ -45,6 +48,7 @@ const useChatAPI = (chatId: string) => {
     try {
       setIsTyping(true);
       let botMsg: Message;
+      let replyText = "";
 
       if (isImage) {
         const imageUrl = await generateImage({userMessage,baseprompt:selectedChat?.character.baseImagePrompt as string});
@@ -53,21 +57,28 @@ const useChatAPI = (chatId: string) => {
         const filteredMessages = messages.filter((msg)=> msg.sender==="bot" && msg.isImage)
         const reply = await generateBotReply(messages, userMessage,selectedChat?.character.basePersonalityPrompt as string);
         if (reply && reply !== "No response received.") {
-          speak(reply);
+          if (isVoiceEnabled) {
+            speak(reply);
+          }
+          replyText = reply;
         }
         botMsg = { sender: "bot", text: reply, timestamp: new Date().toISOString() };
       }
 
       addMessage(botMsg);
       await saveChatMessage(chatId, botMsg); // Save bot message
+      
+      setIsTyping(false);
+      return replyText;
+
     } catch (error) {
       console.error("Error sending message:", error);
       const errorMessage: Message = { sender: "bot", text: "Something went wrong. Please try again.", timestamp: new Date().toISOString() };
       addMessage(errorMessage);
       await saveChatMessage(chatId, errorMessage); // Save error message
+      setIsTyping(false);
+      return "Something went wrong.";
     }
-
-    setIsTyping(false);
   };
 
   return { messages, sendMessage, chatContainerRef, isTyping };
