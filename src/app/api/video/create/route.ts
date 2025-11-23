@@ -34,6 +34,7 @@ export async function POST(req: NextRequest) {
     // Trigger processing in background (fire and forget)
     // Note: In serverless (Vercel), this might be killed if the function returns.
     // For local dev, this works. For production, use a queue (Redis/Bull) or Vercel Cron/Functions.
+    // Force rebuild comment
     processVideoJob((job as any)._id.toString()).catch((err: any) => console.error("Background processing error:", err));
 
     return NextResponse.json({ jobId: job._id, status: "PENDING" }, { status: 201 });

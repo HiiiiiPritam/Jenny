@@ -139,14 +139,24 @@ export const processVideoJob = async (jobId: string) => {
       fs.mkdirSync(tempDir, { recursive: true });
     }
 
+    // Generate dynamic prompts
+    logDebug("Generating video prompts...");
+    job.stage = "Generating story";
+    await job.save();
+    
+    const { generateVideoPrompts } = await import("./generativeAIService");
+    const prompts = await generateVideoPrompts(job.prompt);
+    logDebug(`Generated ${prompts.length} prompts: ${JSON.stringify(prompts)}`);
+
     // Generate 5 images with slight variations
     const imagePaths: string[] = [];
-    const basePrompt = job.prompt;
     
     // Pollinations URL structure: https://image.pollinations.ai/prompt/{prompt}?seed={seed}
     for (let i = 0; i < 5; i++) {
       const seed = Math.floor(Math.random() * 1000000);
-      const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(basePrompt)}?seed=${seed}&width=1024&height=576&nologo=true`;
+      // Use the generated prompt if available, otherwise fallback to base prompt
+      const prompt = prompts[i] || job.prompt;
+      const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?seed=${seed}&width=1024&height=576&nologo=true`;
       const imagePath = path.join(tempDir, `image_${i}.jpg`);
       
       logDebug(`Downloading image ${i + 1}/5: ${imageUrl}`);
@@ -224,9 +234,6 @@ export const processVideoJob = async (jobId: string) => {
       logDebug(`Cloudinary upload failed: ${uploadError.message}. Keeping local file.`);
     }
 
-    // Cleanup temp images
-    fs.rmSync(tempDir, { recursive: true, force: true });
-
     // Update Job
     job.status = "COMPLETED";
     job.videoUrl = publicVideoUrl;
@@ -242,6 +249,17 @@ export const processVideoJob = async (jobId: string) => {
       job.status = "FAILED";
       job.error = error.message || "Unknown error";
       await job.save();
+    }
+  } finally {
+    // Cleanup temp images regardless of success or failure
+    const tempDir = path.join(process.cwd(), "public", "temp", jobId);
+    if (fs.existsSync(tempDir)) {
+      try {
+        fs.rmSync(tempDir, { recursive: true, force: true });
+        logDebug(`Cleaned up temp directory: ${tempDir}`);
+      } catch (cleanupError: any) {
+        logDebug(`Failed to cleanup temp directory: ${cleanupError.message}`);
+      }
     }
   }
 };

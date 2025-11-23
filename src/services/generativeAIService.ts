@@ -66,3 +66,41 @@ export const generateImage = async ({userMessage, baseprompt=""}: {userMessage:s
   }
 };
 
+export const generateVideoPrompts = async (basePrompt: string): Promise<string[]> => {
+  try {
+    const prompt = `Generate 5 sequential, descriptive image prompts to create a short, coherent video story based on the following theme: "${basePrompt}". 
+    Each prompt should be detailed but concise (under 30 words). 
+    Return ONLY the 5 prompts, separated by a newline character. Do not include numbering or extra text.`;
+
+    const response = await cohere.chat({
+      model: "command-r-plus", // Using a capable model for creativity
+      messages: [
+        {
+          role: "user",
+          content: prompt,
+        },
+      ],
+    });
+
+    if (response && response.message && response.message.content) {
+      const text = response.message.content[0].text;
+      // Split by newline and filter out empty lines
+      const prompts = text.split('\n').filter(line => line.trim() !== '').slice(0, 5);
+      
+      // Fallback if splitting fails or returns too few
+      if (prompts.length < 5) {
+        console.warn("Cohere returned fewer than 5 prompts, filling with base prompt variations.");
+        while (prompts.length < 5) {
+          prompts.push(`${basePrompt} - scene ${prompts.length + 1}`);
+        }
+      }
+      return prompts;
+    }
+    
+    throw new Error("No response content from Cohere");
+  } catch (error) {
+    console.error("Error generating video prompts:", error);
+    // Fallback to base prompt variations if AI fails
+    return Array(5).fill(basePrompt).map((p, i) => `${p} - variation ${i + 1}`);
+  }
+};
