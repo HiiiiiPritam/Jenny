@@ -1,0 +1,1226 @@
+[2025-11-22T18:48:45.296Z] Starting processing for job 6922058dd118f3c76fba9ee5
+[2025-11-22T18:48:45.589Z] Job 6922058dd118f3c76fba9ee5 status set to PROCESSING
+[2025-11-22T18:48:45.592Z] Downloading image 1/5: https://image.pollinations.ai/prompt/curl%20test%202?seed=106182&width=1024&height=576&nologo=true
+[2025-11-22T18:49:07.631Z] Downloading image 2/5: https://image.pollinations.ai/prompt/curl%20test%202?seed=64485&width=1024&height=576&nologo=true
+[2025-11-22T18:49:40.721Z] Downloading image 3/5: https://image.pollinations.ai/prompt/curl%20test%202?seed=772609&width=1024&height=576&nologo=true
+[2025-11-22T18:50:06.891Z] Downloading image 4/5: https://image.pollinations.ai/prompt/curl%20test%202?seed=874852&width=1024&height=576&nologo=true
+[2025-11-22T18:50:20.731Z] Starting processing for job 692205ecd118f3c76fba9f0d
+[2025-11-22T18:50:21.150Z] Job 692205ecd118f3c76fba9f0d status set to PROCESSING
+[2025-11-22T18:50:21.151Z] Downloading image 1/5: https://image.pollinations.ai/prompt/curl%20test%203?seed=177523&width=1024&height=576&nologo=true
+[2025-11-22T18:50:21.151Z] downloadImage called for https://image.pollinations.ai/prompt/curl%20test%203?seed=177523&width=1024&height=576&nologo=true
+[2025-11-22T18:50:31.170Z] Axios error for https://image.pollinations.ai/prompt/curl%20test%203?seed=177523&width=1024&height=576&nologo=true: timeout of 10000ms exceeded
+[2025-11-22T18:50:31.171Z] Job 692205ecd118f3c76fba9f0d failed: timeout of 10000ms exceeded
+[2025-11-22T18:50:37.299Z] Downloading image 5/5: https://image.pollinations.ai/prompt/curl%20test%202?seed=674046&width=1024&height=576&nologo=true
+[2025-11-22T18:51:21.845Z] Job 6922058dd118f3c76fba9ee5 failed: Request failed with status code 502
+[2025-11-22T19:01:41.131Z] Starting processing for job 69220895d118f3c76fbaa0b7
+[2025-11-22T19:01:41.348Z] Job 69220895d118f3c76fbaa0b7 status set to PROCESSING
+[2025-11-22T19:01:41.349Z] Downloading image 1/5: https://image.pollinations.ai/prompt/video%20of%20girl%20dancing?seed=703088&width=1024&height=576&nologo=true
+[2025-11-22T19:01:41.350Z] downloadImage called for https://image.pollinations.ai/prompt/video%20of%20girl%20dancing?seed=703088&width=1024&height=576&nologo=true
+[2025-11-22T19:02:10.770Z] Response received for https://image.pollinations.ai/prompt/video%20of%20girl%20dancing?seed=703088&width=1024&height=576&nologo=true
+[2025-11-22T19:02:10.865Z] Download finished for https://image.pollinations.ai/prompt/video%20of%20girl%20dancing?seed=703088&width=1024&height=576&nologo=true
+[2025-11-22T19:02:10.866Z] Downloading image 2/5: https://image.pollinations.ai/prompt/video%20of%20girl%20dancing?seed=587401&width=1024&height=576&nologo=true
+[2025-11-22T19:02:10.866Z] downloadImage called for https://image.pollinations.ai/prompt/video%20of%20girl%20dancing?seed=587401&width=1024&height=576&nologo=true
+[2025-11-22T19:02:40.959Z] Axios error for https://image.pollinations.ai/prompt/video%20of%20girl%20dancing?seed=587401&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-22T19:02:40.960Z] Job 69220895d118f3c76fbaa0b7 failed: timeout of 30000ms exceeded
+[2025-11-22T19:03:50.393Z] Starting processing for job 69220916a8b92ab98ef351d2
+[2025-11-22T19:03:50.670Z] Job 69220916a8b92ab98ef351d2 status set to PROCESSING
+[2025-11-22T19:03:50.671Z] Downloading image 1/5: https://image.pollinations.ai/prompt/futuristic%20city?seed=534472&width=1024&height=576&nologo=true
+[2025-11-22T19:03:50.672Z] downloadImage called for https://image.pollinations.ai/prompt/futuristic%20city?seed=534472&width=1024&height=576&nologo=true
+[2025-11-22T19:04:19.111Z] Response received for https://image.pollinations.ai/prompt/futuristic%20city?seed=534472&width=1024&height=576&nologo=true
+[2025-11-22T19:04:19.284Z] Download finished for https://image.pollinations.ai/prompt/futuristic%20city?seed=534472&width=1024&height=576&nologo=true
+[2025-11-22T19:04:19.285Z] Downloading image 2/5: https://image.pollinations.ai/prompt/futuristic%20city?seed=202554&width=1024&height=576&nologo=true
+[2025-11-22T19:04:19.286Z] downloadImage called for https://image.pollinations.ai/prompt/futuristic%20city?seed=202554&width=1024&height=576&nologo=true
+[2025-11-22T19:04:49.303Z] Axios error for https://image.pollinations.ai/prompt/futuristic%20city?seed=202554&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-22T19:04:49.304Z] Job 69220916a8b92ab98ef351d2 failed: timeout of 30000ms exceeded
+[2025-11-23T02:35:46.114Z] Starting processing for job 69227301f6ff28a3f5ca89fb
+[2025-11-23T02:35:46.379Z] Job 69227301f6ff28a3f5ca89fb status set to PROCESSING
+[2025-11-23T02:35:46.382Z] Downloading image 1/5: https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=465199&width=1024&height=576&nologo=true
+[2025-11-23T02:35:46.384Z] downloadImage called for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=465199&width=1024&height=576&nologo=true
+[2025-11-23T02:36:00.397Z] Response received for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=465199&width=1024&height=576&nologo=true
+[2025-11-23T02:36:00.750Z] Download finished for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=465199&width=1024&height=576&nologo=true
+[2025-11-23T02:36:00.752Z] Downloading image 2/5: https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=275189&width=1024&height=576&nologo=true
+[2025-11-23T02:36:00.753Z] downloadImage called for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=275189&width=1024&height=576&nologo=true
+[2025-11-23T02:36:29.027Z] Response received for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=275189&width=1024&height=576&nologo=true
+[2025-11-23T02:36:29.905Z] Download finished for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=275189&width=1024&height=576&nologo=true
+[2025-11-23T02:36:29.906Z] Downloading image 3/5: https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=267796&width=1024&height=576&nologo=true
+[2025-11-23T02:36:29.907Z] downloadImage called for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=267796&width=1024&height=576&nologo=true
+[2025-11-23T02:36:59.916Z] Axios error for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=267796&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:36:59.917Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:37:01.934Z] downloadImage called for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=267796&width=1024&height=576&nologo=true
+[2025-11-23T02:37:02.835Z] Response received for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=267796&width=1024&height=576&nologo=true
+[2025-11-23T02:37:02.943Z] Download finished for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=267796&width=1024&height=576&nologo=true
+[2025-11-23T02:37:02.944Z] Downloading image 4/5: https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=788367&width=1024&height=576&nologo=true
+[2025-11-23T02:37:02.946Z] downloadImage called for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=788367&width=1024&height=576&nologo=true
+[2025-11-23T02:37:28.066Z] Response received for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=788367&width=1024&height=576&nologo=true
+[2025-11-23T02:37:28.422Z] Download finished for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=788367&width=1024&height=576&nologo=true
+[2025-11-23T02:37:28.424Z] Downloading image 5/5: https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=8101&width=1024&height=576&nologo=true
+[2025-11-23T02:37:28.425Z] downloadImage called for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=8101&width=1024&height=576&nologo=true
+[2025-11-23T02:37:58.068Z] Response received for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=8101&width=1024&height=576&nologo=true
+[2025-11-23T02:37:58.512Z] Download finished for https://image.pollinations.ai/prompt/calm%20old%20man%20in%20a%20farm%20in%20winter%20morning?seed=8101&width=1024&height=576&nologo=true
+[2025-11-23T02:37:58.515Z] Stitching video...
+[2025-11-23T02:37:58.586Z] FFMPEG Error: Cannot find ffprobe
+[2025-11-23T02:37:58.587Z] Job 69227301f6ff28a3f5ca89fb failed: Cannot find ffprobe
+[2025-11-23T02:50:50.649Z] Starting processing for job 6922768af6ff28a3f5ca8b32
+[2025-11-23T02:50:50.944Z] Job 6922768af6ff28a3f5ca8b32 status set to PROCESSING
+[2025-11-23T02:50:50.946Z] Downloading image 1/5: https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=267351&width=1024&height=576&nologo=true
+[2025-11-23T02:50:50.947Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=267351&width=1024&height=576&nologo=true
+[2025-11-23T02:50:54.201Z] Starting processing for job 6922768ef6ff28a3f5ca8b38
+[2025-11-23T02:50:54.426Z] Job 6922768ef6ff28a3f5ca8b38 status set to PROCESSING
+[2025-11-23T02:50:54.428Z] Downloading image 1/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=841701&width=1024&height=576&nologo=true
+[2025-11-23T02:50:54.429Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=841701&width=1024&height=576&nologo=true
+[2025-11-23T02:51:10.312Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=267351&width=1024&height=576&nologo=true
+[2025-11-23T02:51:10.819Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=267351&width=1024&height=576&nologo=true
+[2025-11-23T02:51:10.820Z] Downloading image 2/5: https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=764189&width=1024&height=576&nologo=true
+[2025-11-23T02:51:10.820Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=764189&width=1024&height=576&nologo=true
+[2025-11-23T02:51:24.445Z] Axios error for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=841701&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:51:24.446Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:51:26.448Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=841701&width=1024&height=576&nologo=true
+[2025-11-23T02:51:40.027Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=841701&width=1024&height=576&nologo=true
+[2025-11-23T02:51:40.229Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=841701&width=1024&height=576&nologo=true
+[2025-11-23T02:51:40.230Z] Downloading image 2/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=294059&width=1024&height=576&nologo=true
+[2025-11-23T02:51:40.231Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=294059&width=1024&height=576&nologo=true
+[2025-11-23T02:51:40.828Z] Axios error for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=764189&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:51:40.829Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:51:42.830Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=764189&width=1024&height=576&nologo=true
+[2025-11-23T02:52:09.943Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=764189&width=1024&height=576&nologo=true
+[2025-11-23T02:52:10.233Z] Axios error for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=294059&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:52:10.234Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:52:10.343Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=764189&width=1024&height=576&nologo=true
+[2025-11-23T02:52:10.344Z] Downloading image 3/5: https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=5082&width=1024&height=576&nologo=true
+[2025-11-23T02:52:10.345Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=5082&width=1024&height=576&nologo=true
+[2025-11-23T02:52:12.244Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=294059&width=1024&height=576&nologo=true
+[2025-11-23T02:52:40.360Z] Axios error for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=5082&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:52:40.361Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:52:42.249Z] Axios error for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=294059&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:52:42.250Z] Operation failed: timeout of 30000ms exceeded. Retrying in 4000ms... (2 retries left)
+[2025-11-23T02:52:42.371Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=5082&width=1024&height=576&nologo=true
+[2025-11-23T02:52:46.259Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=294059&width=1024&height=576&nologo=true
+[2025-11-23T02:52:48.174Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=294059&width=1024&height=576&nologo=true
+[2025-11-23T02:52:48.566Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=294059&width=1024&height=576&nologo=true
+[2025-11-23T02:52:48.567Z] Downloading image 3/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=624158&width=1024&height=576&nologo=true
+[2025-11-23T02:52:48.567Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=624158&width=1024&height=576&nologo=true
+[2025-11-23T02:53:12.384Z] Axios error for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=5082&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:53:12.385Z] Operation failed: timeout of 30000ms exceeded. Retrying in 4000ms... (2 retries left)
+[2025-11-23T02:53:16.392Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=5082&width=1024&height=576&nologo=true
+[2025-11-23T02:53:17.783Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=5082&width=1024&height=576&nologo=true
+[2025-11-23T02:53:17.789Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=5082&width=1024&height=576&nologo=true
+[2025-11-23T02:53:17.790Z] Downloading image 4/5: https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=95870&width=1024&height=576&nologo=true
+[2025-11-23T02:53:17.791Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=95870&width=1024&height=576&nologo=true
+[2025-11-23T02:53:18.573Z] Axios error for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=624158&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:53:18.574Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:53:20.575Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=624158&width=1024&height=576&nologo=true
+[2025-11-23T02:53:42.001Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=624158&width=1024&height=576&nologo=true
+[2025-11-23T02:53:42.602Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=624158&width=1024&height=576&nologo=true
+[2025-11-23T02:53:42.603Z] Downloading image 4/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=892467&width=1024&height=576&nologo=true
+[2025-11-23T02:53:42.604Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=892467&width=1024&height=576&nologo=true
+[2025-11-23T02:53:47.793Z] Axios error for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=95870&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:53:47.794Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:53:49.804Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=95870&width=1024&height=576&nologo=true
+[2025-11-23T02:54:12.614Z] Axios error for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=892467&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:54:12.615Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:54:14.446Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=95870&width=1024&height=576&nologo=true
+[2025-11-23T02:54:14.510Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=95870&width=1024&height=576&nologo=true
+[2025-11-23T02:54:14.511Z] Downloading image 5/5: https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=148429&width=1024&height=576&nologo=true
+[2025-11-23T02:54:14.512Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=148429&width=1024&height=576&nologo=true
+[2025-11-23T02:54:14.619Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=892467&width=1024&height=576&nologo=true
+[2025-11-23T02:54:44.519Z] Axios error for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=148429&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:54:44.521Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:54:44.628Z] Axios error for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=892467&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:54:44.629Z] Operation failed: timeout of 30000ms exceeded. Retrying in 4000ms... (2 retries left)
+[2025-11-23T02:54:46.530Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=148429&width=1024&height=576&nologo=true
+[2025-11-23T02:54:48.630Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=892467&width=1024&height=576&nologo=true
+[2025-11-23T02:54:50.252Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=892467&width=1024&height=576&nologo=true
+[2025-11-23T02:54:50.533Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=892467&width=1024&height=576&nologo=true
+[2025-11-23T02:54:50.534Z] Downloading image 5/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=736476&width=1024&height=576&nologo=true
+[2025-11-23T02:54:50.535Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=736476&width=1024&height=576&nologo=true
+[2025-11-23T02:55:14.573Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=148429&width=1024&height=576&nologo=true
+[2025-11-23T02:55:14.688Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%202?seed=148429&width=1024&height=576&nologo=true
+[2025-11-23T02:55:14.690Z] Stitching video...
+[2025-11-23T02:55:14.696Z] FFMPEG Error: spawn C:\Users\ratsd\OneDrive\Desktop\prcatice\Web\NEXT\ujv3\.next\server\vendor-chunks\bin\win32\x64\ffprobe.exe ENOENT
+[2025-11-23T02:55:14.697Z] Job 6922768af6ff28a3f5ca8b32 failed: spawn C:\Users\ratsd\OneDrive\Desktop\prcatice\Web\NEXT\ujv3\.next\server\vendor-chunks\bin\win32\x64\ffprobe.exe ENOENT
+[2025-11-23T02:55:20.547Z] Axios error for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=736476&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:55:20.548Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:55:22.555Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=736476&width=1024&height=576&nologo=true
+[2025-11-23T02:55:42.101Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=736476&width=1024&height=576&nologo=true
+[2025-11-23T02:55:42.766Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=736476&width=1024&height=576&nologo=true
+[2025-11-23T02:55:42.767Z] Stitching video...
+[2025-11-23T02:55:42.772Z] FFMPEG Error: spawn C:\Users\ratsd\OneDrive\Desktop\prcatice\Web\NEXT\ujv3\.next\server\vendor-chunks\bin\win32\x64\ffprobe.exe ENOENT
+[2025-11-23T02:55:42.773Z] Job 6922768ef6ff28a3f5ca8b38 failed: spawn C:\Users\ratsd\OneDrive\Desktop\prcatice\Web\NEXT\ujv3\.next\server\vendor-chunks\bin\win32\x64\ffprobe.exe ENOENT
+[2025-11-23T02:57:41.256Z] Starting processing for job 69227825f6ff28a3f5ca8c07
+[2025-11-23T02:57:41.683Z] Job 69227825f6ff28a3f5ca8c07 status set to PROCESSING
+[2025-11-23T02:57:41.685Z] Downloading image 1/5: https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=984462&width=1024&height=576&nologo=true
+[2025-11-23T02:57:41.687Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=984462&width=1024&height=576&nologo=true
+[2025-11-23T02:57:51.709Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=984462&width=1024&height=576&nologo=true
+[2025-11-23T02:57:52.054Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=984462&width=1024&height=576&nologo=true
+[2025-11-23T02:57:52.055Z] Downloading image 2/5: https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=924530&width=1024&height=576&nologo=true
+[2025-11-23T02:57:52.056Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=924530&width=1024&height=576&nologo=true
+[2025-11-23T02:58:20.619Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=924530&width=1024&height=576&nologo=true
+[2025-11-23T02:58:20.830Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=924530&width=1024&height=576&nologo=true
+[2025-11-23T02:58:20.831Z] Downloading image 3/5: https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=985418&width=1024&height=576&nologo=true
+[2025-11-23T02:58:20.832Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=985418&width=1024&height=576&nologo=true
+[2025-11-23T02:58:50.846Z] Axios error for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=985418&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T02:58:50.847Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T02:58:52.855Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=985418&width=1024&height=576&nologo=true
+[2025-11-23T02:58:55.266Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=985418&width=1024&height=576&nologo=true
+[2025-11-23T02:58:55.509Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=985418&width=1024&height=576&nologo=true
+[2025-11-23T02:58:55.510Z] Downloading image 4/5: https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=843636&width=1024&height=576&nologo=true
+[2025-11-23T02:58:55.511Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=843636&width=1024&height=576&nologo=true
+[2025-11-23T02:59:22.377Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=843636&width=1024&height=576&nologo=true
+[2025-11-23T02:59:22.611Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=843636&width=1024&height=576&nologo=true
+[2025-11-23T02:59:22.613Z] Downloading image 5/5: https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=689254&width=1024&height=576&nologo=true
+[2025-11-23T02:59:22.613Z] downloadImage called for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=689254&width=1024&height=576&nologo=true
+[2025-11-23T02:59:52.098Z] Response received for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=689254&width=1024&height=576&nologo=true
+[2025-11-23T02:59:52.301Z] Download finished for https://image.pollinations.ai/prompt/ffprobe%20test%203?seed=689254&width=1024&height=576&nologo=true
+[2025-11-23T02:59:52.302Z] Stitching video...
+[2025-11-23T02:59:53.079Z] FFMPEG Error: spawn C:\Users\ratsd\OneDrive\Desktop\prcatice\Web\NEXT\ujv3\.next\server\vendor-chunks\ffmpeg.exe ENOENT
+[2025-11-23T02:59:53.080Z] Job 69227825f6ff28a3f5ca8c07 failed: spawn C:\Users\ratsd\OneDrive\Desktop\prcatice\Web\NEXT\ujv3\.next\server\vendor-chunks\ffmpeg.exe ENOENT
+[2025-11-23T03:01:18.797Z] Starting processing for job 692278fef6ff28a3f5ca8c66
+[2025-11-23T03:01:19.131Z] Job 692278fef6ff28a3f5ca8c66 status set to PROCESSING
+[2025-11-23T03:01:19.133Z] Downloading image 1/5: https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=493908&width=1024&height=576&nologo=true
+[2025-11-23T03:01:19.135Z] downloadImage called for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=493908&width=1024&height=576&nologo=true
+[2025-11-23T03:01:30.681Z] Response received for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=493908&width=1024&height=576&nologo=true
+[2025-11-23T03:01:31.145Z] Download finished for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=493908&width=1024&height=576&nologo=true
+[2025-11-23T03:01:31.147Z] Downloading image 2/5: https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=935861&width=1024&height=576&nologo=true
+[2025-11-23T03:01:31.147Z] downloadImage called for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=935861&width=1024&height=576&nologo=true
+[2025-11-23T03:02:00.766Z] Response received for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=935861&width=1024&height=576&nologo=true
+[2025-11-23T03:02:01.489Z] Download finished for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=935861&width=1024&height=576&nologo=true
+[2025-11-23T03:02:01.491Z] Downloading image 3/5: https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=577525&width=1024&height=576&nologo=true
+[2025-11-23T03:02:01.492Z] downloadImage called for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=577525&width=1024&height=576&nologo=true
+[2025-11-23T03:02:31.504Z] Axios error for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=577525&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T03:02:31.505Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T03:02:33.507Z] downloadImage called for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=577525&width=1024&height=576&nologo=true
+[2025-11-23T03:02:34.876Z] Response received for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=577525&width=1024&height=576&nologo=true
+[2025-11-23T03:02:34.899Z] Download finished for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=577525&width=1024&height=576&nologo=true
+[2025-11-23T03:02:34.900Z] Downloading image 4/5: https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=53275&width=1024&height=576&nologo=true
+[2025-11-23T03:02:34.901Z] downloadImage called for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=53275&width=1024&height=576&nologo=true
+[2025-11-23T03:03:00.276Z] Response received for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=53275&width=1024&height=576&nologo=true
+[2025-11-23T03:03:00.376Z] Download finished for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=53275&width=1024&height=576&nologo=true
+[2025-11-23T03:03:00.377Z] Downloading image 5/5: https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=641500&width=1024&height=576&nologo=true
+[2025-11-23T03:03:00.378Z] downloadImage called for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=641500&width=1024&height=576&nologo=true
+[2025-11-23T03:03:28.717Z] Response received for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=641500&width=1024&height=576&nologo=true
+[2025-11-23T03:03:29.099Z] Download finished for https://image.pollinations.ai/prompt/ffmpeg%20test%204?seed=641500&width=1024&height=576&nologo=true
+[2025-11-23T03:03:29.101Z] Stitching video...
+[2025-11-23T03:03:30.833Z] Video processing finished
+[2025-11-23T03:03:30.834Z] Uploading to Cloudinary...
+[2025-11-23T03:03:35.601Z] Uploaded to Cloudinary: https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763867015/ai-assistant-videos/692278fef6ff28a3f5ca8c66.mp4
+[2025-11-23T03:03:35.793Z] Job 692278fef6ff28a3f5ca8c66 completed successfully.
+[2025-11-23T03:05:39.572Z] Starting processing for job 69227a03f6ff28a3f5ca8cdd
+[2025-11-23T03:05:39.871Z] Job 69227a03f6ff28a3f5ca8cdd status set to PROCESSING
+[2025-11-23T03:05:39.873Z] Downloading image 1/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=589646&width=1024&height=576&nologo=true
+[2025-11-23T03:05:39.875Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=589646&width=1024&height=576&nologo=true
+[2025-11-23T03:05:49.892Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=589646&width=1024&height=576&nologo=true
+[2025-11-23T03:05:50.013Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=589646&width=1024&height=576&nologo=true
+[2025-11-23T03:05:50.015Z] Downloading image 2/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=43988&width=1024&height=576&nologo=true
+[2025-11-23T03:05:50.016Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=43988&width=1024&height=576&nologo=true
+[2025-11-23T03:06:20.021Z] Axios error for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=43988&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T03:06:20.022Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T03:06:22.029Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=43988&width=1024&height=576&nologo=true
+[2025-11-23T03:06:23.410Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=43988&width=1024&height=576&nologo=true
+[2025-11-23T03:06:23.571Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=43988&width=1024&height=576&nologo=true
+[2025-11-23T03:06:23.572Z] Downloading image 3/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=78744&width=1024&height=576&nologo=true
+[2025-11-23T03:06:23.573Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=78744&width=1024&height=576&nologo=true
+[2025-11-23T03:06:52.200Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=78744&width=1024&height=576&nologo=true
+[2025-11-23T03:06:52.302Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=78744&width=1024&height=576&nologo=true
+[2025-11-23T03:06:52.304Z] Downloading image 4/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=961307&width=1024&height=576&nologo=true
+[2025-11-23T03:06:52.305Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=961307&width=1024&height=576&nologo=true
+[2025-11-23T03:07:22.122Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=961307&width=1024&height=576&nologo=true
+[2025-11-23T03:07:22.256Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=961307&width=1024&height=576&nologo=true
+[2025-11-23T03:07:22.257Z] Downloading image 5/5: https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=566947&width=1024&height=576&nologo=true
+[2025-11-23T03:07:22.258Z] downloadImage called for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=566947&width=1024&height=576&nologo=true
+[2025-11-23T03:07:50.841Z] Response received for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=566947&width=1024&height=576&nologo=true
+[2025-11-23T03:07:51.081Z] Download finished for https://image.pollinations.ai/prompt/girl%20in%20cancer%20bed?seed=566947&width=1024&height=576&nologo=true
+[2025-11-23T03:07:51.082Z] Stitching video...
+[2025-11-23T03:07:51.817Z] Video processing finished
+[2025-11-23T03:07:51.818Z] Uploading to Cloudinary...
+[2025-11-23T03:07:55.884Z] Uploaded to Cloudinary: https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763867275/ai-assistant-videos/69227a03f6ff28a3f5ca8cdd.mp4
+[2025-11-23T03:07:56.041Z] Job 69227a03f6ff28a3f5ca8cdd completed successfully.
+[2025-11-23T03:12:26.419Z] Starting processing for job 69227b9af6ff28a3f5ca8d91
+[2025-11-23T03:12:26.718Z] Job 69227b9af6ff28a3f5ca8d91 status set to PROCESSING
+[2025-11-23T03:12:26.720Z] Downloading image 1/5: https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=389474&width=1024&height=576&nologo=true
+[2025-11-23T03:12:26.720Z] downloadImage called for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=389474&width=1024&height=576&nologo=true
+[2025-11-23T03:12:29.583Z] Response received for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=389474&width=1024&height=576&nologo=true
+[2025-11-23T03:12:29.985Z] Download finished for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=389474&width=1024&height=576&nologo=true
+[2025-11-23T03:12:29.986Z] Downloading image 2/5: https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=922303&width=1024&height=576&nologo=true
+[2025-11-23T03:12:29.987Z] downloadImage called for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=922303&width=1024&height=576&nologo=true
+[2025-11-23T03:12:59.990Z] Axios error for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=922303&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T03:12:59.991Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T03:13:02.001Z] downloadImage called for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=922303&width=1024&height=576&nologo=true
+[2025-11-23T03:13:03.395Z] Response received for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=922303&width=1024&height=576&nologo=true
+[2025-11-23T03:13:03.525Z] Download finished for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=922303&width=1024&height=576&nologo=true
+[2025-11-23T03:13:03.526Z] Downloading image 3/5: https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=307035&width=1024&height=576&nologo=true
+[2025-11-23T03:13:03.527Z] downloadImage called for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=307035&width=1024&height=576&nologo=true
+[2025-11-23T03:13:33.539Z] Axios error for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=307035&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T03:13:33.540Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T03:13:35.554Z] downloadImage called for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=307035&width=1024&height=576&nologo=true
+[2025-11-23T03:13:37.212Z] Response received for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=307035&width=1024&height=576&nologo=true
+[2025-11-23T03:13:37.352Z] Download finished for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=307035&width=1024&height=576&nologo=true
+[2025-11-23T03:13:37.353Z] Downloading image 4/5: https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=879033&width=1024&height=576&nologo=true
+[2025-11-23T03:13:37.353Z] downloadImage called for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=879033&width=1024&height=576&nologo=true
+[2025-11-23T03:14:06.203Z] Response received for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=879033&width=1024&height=576&nologo=true
+[2025-11-23T03:14:06.311Z] Download finished for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=879033&width=1024&height=576&nologo=true
+[2025-11-23T03:14:06.312Z] Downloading image 5/5: https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=678862&width=1024&height=576&nologo=true
+[2025-11-23T03:14:06.313Z] downloadImage called for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=678862&width=1024&height=576&nologo=true
+[2025-11-23T03:14:34.533Z] Response received for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=678862&width=1024&height=576&nologo=true
+[2025-11-23T03:14:34.680Z] Download finished for https://image.pollinations.ai/prompt/man%20in%20shorts%20%2Cdancing?seed=678862&width=1024&height=576&nologo=true
+[2025-11-23T03:14:34.682Z] Stitching video...
+[2025-11-23T03:14:35.345Z] Video processing finished
+[2025-11-23T03:14:35.346Z] Uploading to Cloudinary...
+[2025-11-23T03:14:40.038Z] Uploaded to Cloudinary: https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763867679/ai-assistant-videos/69227b9af6ff28a3f5ca8d91.mp4
+[2025-11-23T03:14:40.194Z] Job 69227b9af6ff28a3f5ca8d91 completed successfully.
+[2025-11-23T03:16:41.669Z] Starting processing for job 69227c99f6ff28a3f5ca8e17
+[2025-11-23T03:16:42.205Z] Job 69227c99f6ff28a3f5ca8e17 status set to PROCESSING
+[2025-11-23T03:16:42.208Z] Downloading image 1/5: https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=273059&width=1024&height=576&nologo=true
+[2025-11-23T03:16:42.326Z] downloadImage called for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=273059&width=1024&height=576&nologo=true
+[2025-11-23T03:16:53.967Z] Response received for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=273059&width=1024&height=576&nologo=true
+[2025-11-23T03:16:54.350Z] Download finished for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=273059&width=1024&height=576&nologo=true
+[2025-11-23T03:16:54.352Z] Downloading image 2/5: https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=851627&width=1024&height=576&nologo=true
+[2025-11-23T03:16:54.483Z] downloadImage called for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=851627&width=1024&height=576&nologo=true
+[2025-11-23T03:17:24.491Z] Axios error for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=851627&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T03:17:24.493Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T03:17:26.507Z] downloadImage called for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=851627&width=1024&height=576&nologo=true
+[2025-11-23T03:17:28.373Z] Response received for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=851627&width=1024&height=576&nologo=true
+[2025-11-23T03:17:28.764Z] Download finished for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=851627&width=1024&height=576&nologo=true
+[2025-11-23T03:17:28.765Z] Downloading image 3/5: https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=258923&width=1024&height=576&nologo=true
+[2025-11-23T03:17:28.890Z] downloadImage called for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=258923&width=1024&height=576&nologo=true
+[2025-11-23T03:17:57.514Z] Response received for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=258923&width=1024&height=576&nologo=true
+[2025-11-23T03:17:57.638Z] Download finished for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=258923&width=1024&height=576&nologo=true
+[2025-11-23T03:17:57.640Z] Downloading image 4/5: https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=194449&width=1024&height=576&nologo=true
+[2025-11-23T03:17:57.833Z] downloadImage called for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=194449&width=1024&height=576&nologo=true
+[2025-11-23T03:18:26.713Z] Response received for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=194449&width=1024&height=576&nologo=true
+[2025-11-23T03:18:26.844Z] Download finished for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=194449&width=1024&height=576&nologo=true
+[2025-11-23T03:18:26.845Z] Downloading image 5/5: https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=748203&width=1024&height=576&nologo=true
+[2025-11-23T03:18:26.959Z] downloadImage called for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=748203&width=1024&height=576&nologo=true
+[2025-11-23T03:18:55.994Z] Response received for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=748203&width=1024&height=576&nologo=true
+[2025-11-23T03:18:56.069Z] Download finished for https://image.pollinations.ai/prompt/A%20calm%20ocean%20with%20sunset?seed=748203&width=1024&height=576&nologo=true
+[2025-11-23T03:18:56.071Z] Stitching video...
+[2025-11-23T03:18:57.144Z] Video processing finished
+[2025-11-23T03:18:57.145Z] Uploading to Cloudinary...
+[2025-11-23T03:19:01.508Z] Uploaded to Cloudinary: https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763867941/ai-assistant-videos/69227c99f6ff28a3f5ca8e17.mp4
+[2025-11-23T03:19:01.639Z] Job 69227c99f6ff28a3f5ca8e17 completed successfully.
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 2
+[API] First job: {"_id":"69220916a8b92ab98ef351d2","userId":"67d4086754a52e0e329a8d17","prompt":"futuristic city","status":"FAILED","createdAt":"2025-11-22T19:03:50.252Z","updatedAt":"2025-11-22T19:04:49.444Z","__v":0,"error":"timeout of 30000ms exceeded"}
+[2025-11-23T03:24:32.351Z] Starting processing for job 69227e6ff6ff28a3f5ca8f62
+[2025-11-23T03:24:32.674Z] Job 69227e6ff6ff28a3f5ca8f62 status set to PROCESSING
+[2025-11-23T03:24:32.681Z] Downloading image 1/5: https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=113478&width=1024&height=576&nologo=true
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[2025-11-23T03:24:32.878Z] downloadImage called for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=113478&width=1024&height=576&nologo=true
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[2025-11-23T03:24:45.539Z] Response received for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=113478&width=1024&height=576&nologo=true
+[2025-11-23T03:24:45.938Z] Download finished for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=113478&width=1024&height=576&nologo=true
+[2025-11-23T03:24:45.940Z] Downloading image 2/5: https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=990506&width=1024&height=576&nologo=true
+[2025-11-23T03:24:46.071Z] downloadImage called for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=990506&width=1024&height=576&nologo=true
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[2025-11-23T03:25:15.071Z] Response received for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=990506&width=1024&height=576&nologo=true
+[2025-11-23T03:25:16.001Z] Download finished for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=990506&width=1024&height=576&nologo=true
+[2025-11-23T03:25:16.002Z] Downloading image 3/5: https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=661087&width=1024&height=576&nologo=true
+[2025-11-23T03:25:16.189Z] downloadImage called for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=661087&width=1024&height=576&nologo=true
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[2025-11-23T03:25:46.172Z] Response received for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=661087&width=1024&height=576&nologo=true
+[2025-11-23T03:25:46.303Z] Download finished for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=661087&width=1024&height=576&nologo=true
+[2025-11-23T03:25:46.304Z] Downloading image 4/5: https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=627346&width=1024&height=576&nologo=true
+[2025-11-23T03:25:46.471Z] downloadImage called for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=627346&width=1024&height=576&nologo=true
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[2025-11-23T03:26:16.486Z] Axios error for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=627346&width=1024&height=576&nologo=true: timeout of 30000ms exceeded
+[2025-11-23T03:26:16.488Z] Operation failed: timeout of 30000ms exceeded. Retrying in 2000ms... (3 retries left)
+[2025-11-23T03:26:18.501Z] downloadImage called for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=627346&width=1024&height=576&nologo=true
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[2025-11-23T03:26:19.894Z] Response received for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=627346&width=1024&height=576&nologo=true
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[2025-11-23T03:26:20.124Z] Download finished for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=627346&width=1024&height=576&nologo=true
+[2025-11-23T03:26:20.125Z] Downloading image 5/5: https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=113669&width=1024&height=576&nologo=true
+[2025-11-23T03:26:20.240Z] downloadImage called for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=113669&width=1024&height=576&nologo=true
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[2025-11-23T03:26:47.448Z] Response received for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=113669&width=1024&height=576&nologo=true
+[2025-11-23T03:26:47.981Z] Download finished for https://image.pollinations.ai/prompt/A%20futuristic%20city%20with%20flying%20cars%20at%20night?seed=113669&width=1024&height=576&nologo=true
+[2025-11-23T03:26:47.982Z] Stitching video...
+[2025-11-23T03:26:48.836Z] Video processing finished
+[2025-11-23T03:26:48.837Z] Uploading to Cloudinary...
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"PROCESSING","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:24:32.537Z","__v":0}
+[2025-11-23T03:26:53.826Z] Uploaded to Cloudinary: https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4
+[2025-11-23T03:26:53.957Z] Job 69227e6ff6ff28a3f5ca8f62 completed successfully.
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d50c5ca68799674ea67796
+[API] Found jobs: 1
+[API] First job: {"_id":"69227301f6ff28a3f5ca89fb","userId":"67d50c5ca68799674ea67796","prompt":"calm old man in a farm in winter morning","status":"FAILED","createdAt":"2025-11-23T02:35:45.963Z","updatedAt":"2025-11-23T02:37:58.714Z","__v":0,"error":"Cannot find ffprobe"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}
+[API] Fetching jobs for user: 67d4086754a52e0e329a8d17
+[API] Found jobs: 3
+[API] First job: {"_id":"69227e6ff6ff28a3f5ca8f62","userId":"67d4086754a52e0e329a8d17","prompt":"A futuristic city with flying cars at night","status":"COMPLETED","createdAt":"2025-11-23T03:24:31.919Z","updatedAt":"2025-11-23T03:26:53.831Z","__v":0,"videoUrl":"https://res.cloudinary.com/dxmqpkx5e/video/upload/v1763868413/ai-assistant-videos/69227e6ff6ff28a3f5ca8f62.mp4"}

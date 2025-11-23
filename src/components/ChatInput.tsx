@@ -28,7 +28,29 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
       }
     });
 
-  // ... (handleFileChange and analyzeImage remain same)
+  const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsImageUploading(true);
+    try {
+      // Here you would typically upload the image to a service
+      // For now, we'll simulate analysis or just use the local URL
+      // In a real app, you'd want to upload to S3/Cloudinary etc.
+      
+      // Simulating analysis delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      // For this demo, we'll just say we analyzed it
+      setVisionOutput("Image uploaded successfully. (Mock analysis)");
+      showToast("Image analyzed successfully", "success");
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      showToast("Failed to upload image", "error");
+    } finally {
+      setIsImageUploading(false);
+    }
+  };
 
   const handleSend = () => {
     if (input.trim()) {
@@ -44,7 +66,12 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
     }
   };
 
-  // ... (handleKeyPress and useEffect remain same)
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
 
   return (
     <>
@@ -54,26 +81,71 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
       >
-        {/* ... (Vision Output Display remains same) */}
+        {/* Vision Output Display */}
+        {visionOutput && (
+          <div className="mb-2 p-2 bg-blue-900/30 rounded text-xs text-blue-200 flex justify-between items-center">
+            <span>{visionOutput}</span>
+            <button onClick={() => setVisionOutput("")} className="text-blue-400 hover:text-white">×</button>
+          </div>
+        )}
         
         {/* Main Input Area */}
         <div className="flex items-end gap-3">
-          {/* ... (Text Input remains same) */}
+          <div className="flex-1 relative">
+            <textarea
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyPress}
+              className={`w-full bg-gray-800/50 text-white rounded-xl px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-gray-700 resize-none transition-all duration-200 ${
+                isImageUploading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              placeholder="Type a message... (Press Enter to send, Shift+Enter for new line)"
+              disabled={isImageUploading}
+              rows={1}
+              style={{
+                minHeight: '52px',
+                maxHeight: '120px',
+                scrollbarWidth: 'thin',
+                scrollbarColor: '#8b5cf6 transparent'
+              }}
+            />
+            
+            {/* Character count */}
+            <div className="absolute bottom-2 right-3 text-xs text-gray-500">
+              {input.length}/500
+            </div>
+          </div>
           
           {/* Action Buttons */}
           <div className="flex gap-2">
-            {/* ... (Image Upload remains same) */}
+            {/* Image Upload */}
+            <label className={`relative group cursor-pointer ${
+              isImageUploading ? "opacity-50 cursor-not-allowed" : ""
+            }`}>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+                disabled={isImageUploading}
+                className="hidden"
+              />
+              <div className="p-3 bg-gray-700 hover:bg-gray-600 rounded-xl transition-all duration-200 border border-gray-600 group-hover:border-purple-500 group-hover:text-purple-400 text-white">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+            </label>
             
             {/* Voice Response Toggle */}
             <motion.button
               onClick={() => setIsVoiceEnabled(!isVoiceEnabled)}
-              disabled={isImageUploading || isTyping}
+              disabled={isImageUploading}
               className={`p-3 rounded-xl transition-all duration-200 border ${
                 isVoiceEnabled 
                   ? "bg-pink-600 hover:bg-pink-700 border-pink-500" 
                   : "bg-gray-700 hover:bg-gray-600 border-gray-600"
               } text-white ${
-                isImageUploading || isTyping ? "opacity-50 cursor-not-allowed" : ""
+                isImageUploading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -93,13 +165,13 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
             {/* Speech to Text */}
             <motion.button
               onClick={isListening ? stopListening : startListening}
-              disabled={isImageUploading || isTyping}
+              disabled={isImageUploading}
               className={`p-3 rounded-xl transition-all duration-200 border ${
                 isListening 
                   ? "bg-red-600 hover:bg-red-700 border-red-500" 
                   : "bg-green-600 hover:bg-green-700 border-green-500"
               } text-white ${
-                isImageUploading || isTyping ? "opacity-50 cursor-not-allowed" : ""
+                isImageUploading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -112,13 +184,13 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
             {/* Image Generation Toggle */}
             <motion.button
               onClick={() => setGenerateImage(!generateImage)}
-              disabled={isImageUploading || isTyping}
+              disabled={isImageUploading}
               className={`p-3 rounded-xl transition-all duration-200 border ${
                 generateImage 
                   ? "bg-purple-600 hover:bg-purple-700 border-purple-500" 
                   : "bg-gray-700 hover:bg-gray-600 border-gray-600"
               } text-white ${
-                isImageUploading || isTyping ? "opacity-50 cursor-not-allowed" : ""
+                isImageUploading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -131,14 +203,14 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, isTyping }) => {
             {/* Send Button */}
             <motion.button
               onClick={handleSend}
-              disabled={!input.trim() || isImageUploading || isTyping}
+              disabled={!input.trim() || isImageUploading}
               className={`p-3 rounded-xl transition-all duration-200 ${
-                input.trim() && !isImageUploading && !isTyping
+                input.trim() && !isImageUploading
                   ? "bg-blue-600 hover:bg-blue-700 border-blue-500" 
                   : "bg-gray-700 border-gray-600 opacity-50 cursor-not-allowed"
               } text-white border`}
-              whileHover={input.trim() && !isImageUploading && !isTyping ? { scale: 1.05 } : {}}
-              whileTap={input.trim() && !isImageUploading && !isTyping ? { scale: 0.95 } : {}}
+              whileHover={input.trim() && !isImageUploading ? { scale: 1.05 } : {}}
+              whileTap={input.trim() && !isImageUploading ? { scale: 0.95 } : {}}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

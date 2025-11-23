@@ -9,7 +9,7 @@ export default function Navbar() {
   const { data: session } = useSession(); // Get user session
 
   return (
-    <nav className="bg-gray-900 h-16 p-4 flex justify-between items-center w-full">
+    <nav className="relative bg-gray-900 h-16 p-4 flex justify-between items-center w-full">
       {/* Left: Logo */}
       <div className="md:hidden">
 
