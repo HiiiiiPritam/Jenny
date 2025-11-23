@@ -6,6 +6,7 @@ export interface IUser extends Document {
   characters: mongoose.Types.ObjectId[]; // References created characters
   chats: mongoose.Types.ObjectId[]; // References active chats
   image: string;
+  isRealGirlfriendMode: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -15,6 +16,7 @@ const UserSchema: Schema = new Schema<IUser>(
     name: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
     image: { type: String },
+    isRealGirlfriendMode: { type: Boolean, default: false },
     characters: [{ type: Schema.Types.ObjectId, ref: 'Character' }],
     chats: [{ type: Schema.Types.ObjectId, ref: 'Chat' }],
   },

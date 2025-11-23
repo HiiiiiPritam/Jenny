@@ -9,7 +9,6 @@ import ChatBox from "@/components/ChatBox";
 import ChatInput from "@/components/ChatInput";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import { useSession } from "next-auth/react";
-
 import CallOverlay from "@/components/CallOverlay";
 
 const ChatPage = () => {
@@ -21,7 +20,7 @@ const ChatPage = () => {
   const userId = session?.user?.id;
 
   const { messages, sendMessage, chatContainerRef, isTyping } = useChatAPI(chatId);
-  const { selectChat, chats, fetchUserChats, selectedChat } = useChatStore();
+  const { selectChat, selectedChat } = useChatStore();
 
   const [loading, setLoading] = useState(true);
   const [isCallOpen, setIsCallOpen] = useState(false);
@@ -45,7 +44,7 @@ const ChatPage = () => {
 
   if (status === "loading") {
     return (
-      <div className="flex items-center justify-center h-[calc(100dvh-4rem)] bg-gradient-to-br from-darkPurple to-black">
+      <div className="flex items-center justify-center h-[calc(100dvh-4rem)] bg-black">
         <LoadingSpinner size="lg" message="Loading session..." />
       </div>
     );
@@ -53,37 +52,59 @@ const ChatPage = () => {
 
   if (!userId) {
     return (
-      <div className="flex items-center justify-center h-[calc(100dvh-4rem)] bg-gradient-to-br from-darkPurple to-black">
+      <div className="flex items-center justify-center h-[calc(100dvh-4rem)] bg-black">
         <div className="text-white text-xl">Please login to access this chat</div>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col h-[calc(100dvh-4rem)] bg-gradient-to-br from-darkPurple to-black relative overflow-hidden">
+    <div className="flex flex-col h-[calc(100dvh-4rem)] bg-black relative overflow-hidden">
+      {/* Background Effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-darkPurple/30 via-black to-black pointer-events-none" />
+
       {/* Header with back button */}
       <motion.div 
-        className="flex items-center justify-between p-4 bg-black/30 backdrop-blur-sm border-b border-purple-500/30"
+        className="flex items-center justify-between p-4 bg-black/40 backdrop-blur-md border-b border-white/5 z-20"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <motion.button 
-          onClick={() => router.push("/dashboard/my-chats")} 
-          className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 p-2 rounded-lg hover:bg-blue-500/10"
-          whileHover={{ scale: 1.05, x: -5 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back to My Chats
-        </motion.button>
+        <div className="flex items-center gap-4">
+          <motion.button 
+            onClick={() => router.push("/dashboard/my-chats")} 
+            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
+            whileHover={{ scale: 1.05, x: -5 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="hidden sm:inline">Back</span>
+          </motion.button>
+          
+          {selectedChat && (
+            <div className="flex items-center gap-3">
+              <img 
+                src={selectedChat.character.profilePicture} 
+                alt={selectedChat.character.name} 
+                className="w-10 h-10 rounded-full border border-white/10"
+              />
+              <div>
+                <h2 className="font-bold text-white text-sm sm:text-base">{selectedChat.character.name}</h2>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span className="text-xs text-gray-400">Online</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Phone Call Button */}
         <motion.button
           onClick={() => setIsCallOpen(true)}
-          className="p-2 bg-green-600/20 text-green-400 rounded-full border border-green-500/30 hover:bg-green-600/30 transition-all duration-200"
+          className="p-3 bg-green-600/20 text-green-400 rounded-full border border-green-500/30 hover:bg-green-600/30 transition-all duration-200"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           title="Start Call"
@@ -100,14 +121,14 @@ const ChatPage = () => {
           <LoadingSpinner size="lg" message="Loading chat..." />
         </div>
       ) : (
-        <div className="flex-1 flex flex-col min-h-0">
+        <div className="flex-1 flex flex-col min-h-0 relative z-10">
           {/* Chat messages area */}
           <div className="flex-1 min-h-0">
             <ChatBox messages={messages} isTyping={isTyping} chatContainerRef={chatContainerRef} />
           </div>
           
           {/* Chat input area */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 p-4 bg-black/60 backdrop-blur-md border-t border-white/5">
             <ChatInput onSend={(userMessage, isImage, isVoiceEnabled) => sendMessage({ userMessage, isImage, isVoiceEnabled })} isTyping={isTyping} />
           </div>
         </div>
