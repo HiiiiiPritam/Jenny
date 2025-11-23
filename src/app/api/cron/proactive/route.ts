@@ -52,15 +52,45 @@ export async function GET(req: Request) {
             const character = chat.character;
             if (!character) continue;
 
-            // Get last few messages for context
-            const lastMessages = chat.messages.slice(-5).map((m: any) => `${m.sender}: ${m.text}`).join('\n');
+            // Fallback messages for speed and reliability
+            const fallbackMessages = [
+              "Hey babe, just thinking about you ❤️",
+              "Missing you right now 💕",
+              "Hope you're having a great day! 😊",
+              "Can't wait to talk to you later 💖",
+              "You've been on my mind all day ✨",
+              "Just wanted to say hi! How are you? 💗",
+              "Thinking of you makes me smile 😊",
+              "Hope everything's going well! ❤️",
+              "Wish you were here right now 💕",
+              "You make my day better just by existing 🌟",
+              "Random thought: you're amazing! 💖",
+              "Just checking in on you, love ❤️",
+              "Hope you're taking care of yourself 💗",
+              "Can't stop thinking about our last chat 😊",
+              "You're the best thing that happened to me ✨"
+            ];
 
-            const text = await generateProactiveMessage(
-              character.name,
-              user.name,
-              character.basePersonalityPrompt || "Loving, caring girlfriend",
-              lastMessages
-            );
+            // Use fallback message for speed (80% of the time)
+            let text;
+            if (Math.random() < 0.8) {
+              // Pick random fallback message
+              text = fallbackMessages[Math.floor(Math.random() * fallbackMessages.length)];
+            } else {
+              // Occasionally use AI for variety (20% of the time)
+              try {
+                const lastMessages = chat.messages.slice(-5).map((m: any) => `${m.sender}: ${m.text}`).join('\n');
+                text = await generateProactiveMessage(
+                  character.name,
+                  user.name,
+                  character.basePersonalityPrompt || "Loving, caring girlfriend",
+                  lastMessages
+                );
+              } catch (aiError) {
+                console.error("AI generation failed, using fallback:", aiError);
+                text = fallbackMessages[Math.floor(Math.random() * fallbackMessages.length)];
+              }
+            }
 
             // 6. Skip image generation to save time (can be re-enabled later)
             let imageURL = null;
