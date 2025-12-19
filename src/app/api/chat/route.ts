@@ -1,20 +1,20 @@
 
 import { NextResponse } from "next/server";
 import dbConnect from "@/libs/dbConnect";
-import Chats from "@/models/Chats";
+import Chat from "@/models/Chats";
 
 export async function GET(req: Request) {
-
-  const body = await req.json();
-  const { userID } = body;
+  const { searchParams } = new URL(req.url);
+  const userID = searchParams.get("userID");
+  
   await dbConnect();
 
   if (!userID) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ error: "UserID is required" }, { status: 400 });
   }
 
   try {
-    const chats = await Chats.find({ user: userID }).populate("character");
+    const chats = await Chat.find({ user: userID }).populate("character");
     return NextResponse.json(chats, { status: 200 });
   } catch (error) {
     console.error("Error fetching chats:", error);

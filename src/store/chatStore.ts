@@ -59,31 +59,29 @@ export const useChatStore = create<ChatState>((set, get) => ({
   selectChat: async (chatId) => {
     const { chats, selectedChatId } = get();
 
-    // If already selected, don't re-fetch unless forced (logic can be added later)
-    if (selectedChatId === chatId) return;
+    // If already selected, don't re-fetch unless forced
+    if (selectedChatId === chatId && get().selectedChat) return;
 
-    const chat = chats.find((c) => String(c._id) === String(chatId)) || null;
-
-    if (!chat) {
-      console.warn(`Chat with ID ${chatId} not found in local state, fetching...`);
-      // Optional: Fetch single chat if not found in list (omitted for now to stick to plan)
-    }
+    let chat = chats.find((c) => String(c._id) === String(chatId)) || null;
 
     try {
-      // Optimistic update or just set the chat object first
-      set({ selectedChat: chat, selectedChatId: chatId, messages: [] });
+      // If chat not found in local list, fetch it from the server
+      if (!chat) {
+        console.log(`Chat ${chatId} not found in store, fetching...`);
+        const response = await fetch(`/api/chat/message/${chatId}`);
+        if (!response.ok) throw new Error("Failed to fetch chat");
+        chat = await response.json();
+      }
 
-      const response = await fetch(`/api/chat/message/${chatId}`);
-      if (!response.ok) throw new Error("Failed to fetch messages");
-      
-      const data = await response.json();
-      
-      set({
-        messages: data.messages || [],
+      set({ 
+        selectedChat: chat, 
+        selectedChatId: chatId, 
+        messages: chat?.messages || [] 
       });
+
     } catch (error) {
-      console.error("Error fetching chat messages:", error);
-      set({ messages: [] });
+      console.error("Error selecting chat:", error);
+      set({ selectedChat: null, selectedChatId: null, messages: [] });
     }
   },
 

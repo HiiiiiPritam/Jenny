@@ -1,5 +1,5 @@
 import dbConnect from "@/libs/dbConnect";
-import Chats from "@/models/Chats";
+import Chat from "@/models/Chats";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     }
 
     // ✅ Use findOne instead of find
-    const alreadyChat = await Chats.findOne({ user: userId, character: characterId });
+    const alreadyChat = await Chat.findOne({ user: userId, character: characterId });
 
     if (alreadyChat) {
       return NextResponse.json({ 
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
       }, { status: 400 });
     }
 
-    const newChat = await Chats.create({
+    const newChat = await Chat.create({
       user: userId,
       character: characterId,
       messages: [],

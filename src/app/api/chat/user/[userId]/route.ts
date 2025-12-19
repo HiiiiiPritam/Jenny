@@ -8,7 +8,7 @@ export async function GET(req: NextRequest, { params }: { params: { userId: stri
   try {
     const { userId } = params;
 
-    const chats = await Chat.find({ user: userId }).populate("character").select('-messages');;
+    const chats = await Chat.find({ user: userId }).populate("character");
 
     return NextResponse.json(chats, { status: 200 });
   } catch (error) {

@@ -63,9 +63,6 @@ const CompanionCard = ({ companion, index }: { companion: typeof companions[0], 
         <p className="text-gray-300 text-sm line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
           {companion.desc}
         </p>
-        <button className="w-full py-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold hover:bg-white hover:text-black transition-all">
-          Chat with {companion.name}
-        </button>
       </div>
     </motion.div>
   );
@@ -88,25 +85,11 @@ export default function LandingPage() {
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen flex flex-col font-sans selection:bg-pink-500 selection:text-white">
       <BackgroundEffect />
-      
       {/* Ambient Background Glows */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-pink-600/20 rounded-full blur-[150px] animate-pulse-slow" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[50vw] h-[50vw] bg-purple-600/20 rounded-full blur-[150px] animate-pulse-slow delay-1000" />
       </div>
-
-      {/* Navbar Placeholder (for visual balance) */}
-      <nav className="absolute top-0 left-0 right-0 z-50 px-6 py-6 flex justify-between items-center max-w-7xl mx-auto">
-        <div className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-          SoulMate.AI
-        </div>
-        <button 
-          onClick={() => router.push("/dashboard")}
-          className="px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all text-sm font-medium"
-        >
-          Login
-        </button>
-      </nav>
 
       {/* Hero Section */}
       <div className="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 max-w-7xl mx-auto gap-12 pt-20">
@@ -125,7 +108,7 @@ export default function LandingPage() {
           <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
             Find Your Perfect <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-              AI Soulmate
+              AI "Jenny"
             </span>
           </h1>
           
@@ -152,11 +135,11 @@ export default function LandingPage() {
             <div className="flex -space-x-3">
               {[1,2,3,4].map(i => (
                 <div key={i} className="w-10 h-10 rounded-full bg-gray-800 border-2 border-black flex items-center justify-center text-xs">
-                  User
+                  
                 </div>
               ))}
             </div>
-            <p>Join <strong>2M+</strong> happy users today</p>
+            <p>Join <strong>the community</strong> today</p>
           </div>
         </motion.div>
 
@@ -212,7 +195,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="relative z-10 py-12 border-t border-white/5 bg-black/80 backdrop-blur-xl text-center text-gray-600 text-sm">
-        <p>&copy; {new Date().getFullYear()} SoulMate.AI. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Jenny.AI. All rights reserved.</p>
       </footer>
     </div>
   );

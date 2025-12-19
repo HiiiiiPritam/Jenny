@@ -20,9 +20,6 @@ export interface IChat extends Document {
   user: Types.ObjectId; // Reference to User
   character: Types.ObjectId; // Reference to Character
   messages: typeof MessageSchema[];
-  lastProactiveMessageSentAt?: Date;
-  lastUserMessageAt?: Date;
-  nextProactiveMessageAt?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -31,10 +28,7 @@ const ChatSchema = new Schema<IChat>(
   {
     user: { type: Schema.Types.ObjectId, ref: "User", required: true }, // User who owns the chat
     character: { type: Schema.Types.ObjectId, ref: "Character", required: true }, // AI Character
-  messages: [MessageSchema], // Array of messages
-    lastProactiveMessageSentAt: { type: Date }, // Timestamp of last proactive message
-    lastUserMessageAt: { type: Date, default: Date.now }, // When the user last messaged
-    nextProactiveMessageAt: { type: Date }, // Scheduled time for the next proactive message
+    messages: [MessageSchema], // Array of messages
   },
   { timestamps: true }
 );

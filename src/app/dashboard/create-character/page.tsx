@@ -8,19 +8,16 @@ import {
 import { generateImage } from "@/services/generativeAIService";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-// import { createCharacter } from "@/services/characterService";
-import "./style.css";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiChevronRight, FiChevronLeft, FiStar, FiImage, FiSave, FiUser } from "react-icons/fi";
 import useCharacterStore from "@/store/useCharacterStore";
 
 const CreateCharacter = () => {
+  const [step, setStep] = useState(1);
   const [character, setCharacter] = useState({
-    // Basic Information
     name: "",
     description: "",
     isPublic: true,
-    createdBy: "", // Example user ID (replace dynamically)
-
-    // Appearance
     ethnicity: "Caucasian",
     hairColor: "Blonde",
     hairStyle: "Long and Wavy",
@@ -28,69 +25,34 @@ const CreateCharacter = () => {
     skinTone: "Fair",
     faceShape: "Oval",
     facialFeatures: { freckles: false, dimples: false },
-
-    // Physical Attributes
-    physicalAttributes: {
-      height: 165,
-      build: "average",
-    },
-
+    physicalAttributes: { height: 165, build: "average" },
     age: 22,
-
-    // Personality
-    personality: {
-      openness: 8,
-      conscientiousness: 6,
-      extraversion: 9,
-      agreeableness: 7,
-      neuroticism: 3,
-    },
+    personality: { openness: 8, conscientiousness: 6, extraversion: 9, agreeableness: 7, neuroticism: 3 },
     personalityTraits: [],
     assistantRole: "companion",
-
-    // AI Attributes
     imagePrompt: "",
     voiceModel: "Soft and friendly AI voice",
     basePersonalityPrompt: "",
     baseImagePrompt: "",
-
-    // Interests & Preferences
     hobbies: [],
     favoriteThings: [],
-    backgroundStory:
-      "They have an intriguing past, shaping their personality.",
+    backgroundStory: "They have an intriguing past, shaping their personality.",
     style: "Modern and futuristic",
-    preferences: {
-      likes: [],
-      dislikes: [],
-    },
-    virtualPersona: "",
-
-    // Media
+    preferences: { likes: [], dislikes: [] },
     profilePicture: "",
-
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
   });
 
   const { fetchCharacters } = useCharacterStore();
-
   const { data: session } = useSession();
   const router = useRouter();
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Handle input changes
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setCharacter((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Nested Object Handler
   const handleNestedChange = (category: string, key: string, value: any) => {
     setCharacter((prev) => ({
       ...prev,
@@ -101,417 +63,361 @@ const CreateCharacter = () => {
     }));
   };
 
-  // Handle Array Input (for hobbies, favoriteThings, etc.)
   const handleArrayChange = (category: string, value: string) => {
     setCharacter((prev) => ({
       ...prev,
-      [category]: [value],
+      [category]: value.split(",").map(item => item.trim()).filter(Boolean),
     }));
   };
 
-  const createCharacter = async (updatedCharacter: any) => {
-    try {
-      const response = await fetch(`/api/characters/new`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedCharacter),
-      });
-
-      const data = await response.json();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  // Handle checkbox changes for facial features
-  const handleFacialFeatureChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const { name, checked } = e.target;
+  const handleFacialFeatureChange = (name: string, checked: boolean) => {
     setCharacter((prev) => ({
       ...prev,
       facialFeatures: { ...prev.facialFeatures, [name]: checked },
     }));
   };
 
-  // Generate Profile Picture
   const handleGenerateImage = async () => {
     setIsGeneratingImage(true);
     try {
       const prompt = generateImagePrompt(character);
-      console.log("IMG prompt", prompt);
-
       const imageUrl = await generateImage({ userMessage: prompt });
-      if (imageUrl)
+      if (imageUrl) {
         setCharacter((prev) => ({
           ...prev,
           profilePicture: imageUrl,
           imagePrompt: prompt,
         }));
+      }
     } catch (error) {
       console.error("Error generating image:", error);
+    } finally {
+      setIsGeneratingImage(false);
     }
-    setIsGeneratingImage(false);
   };
 
-  // Create Character
   const handleSubmit = async () => {
     if (!character.profilePicture) {
       alert("Please generate a profile picture first!");
       return;
     }
 
-    const physicalAttrs = character.physicalAttributes || {};
-    const physicalText = Object.entries(physicalAttrs)
-    .map(([key, value]) => {
-      if(key==='height') return `${key}: ${value}cm`;
-      if(key==='build') return `${key}: ${value}`;
-      return "";
-    })
-    .join(", ");
-
-    // Ensure base personality & image prompts are meaningful
-    const updatedCharacter = {
-      ...character,
-      basePersonalityPrompt: generatePersonalityPrompt(character),
-      baseImagePrompt:
-        character.baseImagePrompt ||
-        `A professional portrait of ${character.name}, a ${character.age}-year-old person of ${character.ethnicity} origin with ${character.skinTone} skin tone and ${character.hairColor} ${character.hairStyle} hair, ${character.eyeColor} eyes, and a ${character.faceShape} face. Physical build: ${physicalText}.`,
-      createdBy: session?.user.id,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
-
     setIsSubmitting(true);
     try {
-      console.log("updatedCharacter", updatedCharacter);
-      await createCharacter(updatedCharacter);
-      alert("Character created successfully!");
+      const physicalAttrs = character.physicalAttributes || {};
+      const physicalText = `height: ${physicalAttrs.height}cm, build: ${physicalAttrs.build}`;
+      
+      const updatedCharacter = {
+        ...character,
+        basePersonalityPrompt: generatePersonalityPrompt(character),
+        baseImagePrompt: character.baseImagePrompt || `A professional portrait of ${character.name}, a ${character.age}-year-old person of ${character.ethnicity} origin with ${character.skinTone} skin tone and ${character.hairColor} ${character.hairStyle} hair, ${character.eyeColor} eyes, and a ${character.faceShape} face. Physical build: ${physicalText}.`,
+        createdBy: session?.user.id,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      const response = await fetch(`/api/characters/new`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedCharacter),
+      });
+
+      if (!response.ok) throw new Error("Failed to create character");
+      
+      await fetchCharacters();
+      router.push("/dashboard");
     } catch (error) {
       console.error("Error creating character:", error);
+      alert("Failed to create character. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false);
-    await fetchCharacters();
-    router.push("/dashboard/");
   };
 
-  if (!session?.user.id) return <div>No user present</div>;
+  if (!session?.user.id) return <div className="flex items-center justify-center h-full text-white/50">Loading session...</div>;
+
+  const steps = [
+    { id: 1, title: "Identity", icon: <FiUser /> },
+    { id: 2, title: "Appearance", icon: <FiStar /> },
+    { id: 3, title: "Personality", icon: <FiStar /> },
+    { id: 4, title: "Visuals", icon: <FiImage /> },
+  ];
 
   return (
-    <div className="p-6 relative z-10 max-h-[calc(100dvh-4rem)] overflow-auto inset-0 bg-gradient-to-br text-[#753a6d] from-darkPurple to-black w-full mx-auto ">
-      <h2 className="text-2xl text-matteRed font-bold mb-4">
-        Create a New Character
-      </h2>
+    <div className="max-w-4xl mx-auto px-8 pt-24 pb-8 text-white min-h-full">
+      <header className="mb-12">
+        <h1 className="text-4xl font-bold tracking-tight mb-2 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+          Create AI Companion
+        </h1>
+        <p className="text-gray-400">Design your perfect AI partner with unique traits and personality.</p>
+      </header>
 
-      {/* Name */}
-      <div className="mb-4">
-        <label className="block font-semibold">Name:</label>
-        <input
-          type="text"
-          name="name"
-          value={character.name}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        />
+      {/* Progress Bar */}
+      <div className="flex items-center justify-between mb-12 relative">
+        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-white/5 -translate-y-1/2 z-0" />
+        {steps.map((s) => (
+          <div key={s.id} className="relative z-10 flex flex-col items-center gap-3">
+            <button
+              onClick={() => step > s.id && setStep(s.id)}
+              className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 ${
+                step === s.id 
+                  ? "bg-pink-600 shadow-lg shadow-pink-600/40 text-white" 
+                  : step > s.id 
+                    ? "bg-green-600 text-white" 
+                    : "bg-[#1a1a1a] text-gray-500 border border-white/5"
+              }`}
+            >
+              {s.icon}
+            </button>
+            <span className={`text-xs font-bold uppercase tracking-wider ${step === s.id ? "text-pink-500" : "text-gray-500"}`}>
+              {s.title}
+            </span>
+          </div>
+        ))}
       </div>
 
-      {/* Description */}
-      <div className="mb-4">
-        <label className="block font-semibold">Description:</label>
-        <textarea
-          name="description"
-          value={character.description}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        ></textarea>
+      {/* Form Content */}
+      <div className="bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+        <AnimatePresence mode="wait">
+          {step === 1 && (
+            <motion.div
+              key="step1"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-6"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-400">Companion Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={character.name}
+                    onChange={handleChange}
+                    placeholder="e.g. Luna"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all outline-none"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-400">Role</label>
+                  <select
+                    name="assistantRole"
+                    value={character.assistantRole}
+                    onChange={handleChange}
+                    className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl px-5 py-3 focus:ring-2 focus:ring-pink-500 transition-all outline-none"
+                  >
+                    <option value="companion">Friendly Companion</option>
+                    <option value="mentor">Mentor & Guide</option>
+                    <option value="tutor">Learning Tutor</option>
+                    <option value="consultant">Professional Consultant</option>
+                    <option value="assistant">Personal Assistant</option>
+                  </select>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-semibold text-gray-400">Short Description</label>
+                <textarea
+                  name="description"
+                  value={character.description}
+                  onChange={handleChange}
+                  placeholder="What makes them special?"
+                  rows={4}
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3 focus:ring-2 focus:ring-pink-500 transition-all outline-none resize-none"
+                />
+              </div>
+            </motion.div>
+          )}
+
+          {step === 2 && (
+            <motion.div
+              key="step2"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-6"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-400">Ethnicity</label>
+                  <select name="ethnicity" value={character.ethnicity} onChange={handleChange} className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl px-5 py-3 outline-none">
+                    <option value="Anime">Anime Style</option>
+                    <option value="Caucasian">Caucasian</option>
+                    <option value="Asian">Asian</option>
+                    <option value="Indian">Indian</option>
+                    <option value="African">African</option>
+                    <option value="Hispanic">Hispanic</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-400">Skin Tone</label>
+                  <select name="skinTone" value={character.skinTone} onChange={handleChange} className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl px-5 py-3 outline-none">
+                    <option value="Fair">Fair</option>
+                    <option value="Light">Light</option>
+                    <option value="Tan">Tan</option>
+                    <option value="Dark">Dark</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-400">Hair Color</label>
+                  <select name="hairColor" value={character.hairColor} onChange={handleChange} className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl px-5 py-3 outline-none">
+                    <option value="Black">Black</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Blonde">Blonde</option>
+                    <option value="White">White</option>
+                    <option value="Silver">Silver</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-400">Hair Style</label>
+                  <select name="hairStyle" value={character.hairStyle} onChange={handleChange} className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl px-5 py-3 outline-none">
+                    <option value="Short and Straight">Short & Straight</option>
+                    <option value="Long and Wavy">Long & Wavy</option>
+                    <option value="Ponytail">Ponytail</option>
+                    <option value="Bob Cut">Bob Cut</option>
+                  </select>
+                </div>
+              </div>
+              <div className="flex gap-8">
+                <label className="flex items-center gap-3 cursor-pointer group">
+                  <div className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all ${character.facialFeatures.freckles ? "bg-pink-600 border-pink-600" : "border-white/10 bg-white/5"}`}
+                    onClick={() => handleFacialFeatureChange("freckles", !character.facialFeatures.freckles)}>
+                    {character.facialFeatures.freckles && <div className="w-2 h-2 rounded-full bg-white" />}
+                  </div>
+                  <span className="text-sm font-medium text-gray-300">Freckles</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer group">
+                  <div className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all ${character.facialFeatures.dimples ? "bg-pink-600 border-pink-600" : "border-white/10 bg-white/5"}`}
+                    onClick={() => handleFacialFeatureChange("dimples", !character.facialFeatures.dimples)}>
+                    {character.facialFeatures.dimples && <div className="w-2 h-2 rounded-full bg-white" />}
+                  </div>
+                  <span className="text-sm font-medium text-gray-300">Dimples</span>
+                </label>
+              </div>
+            </motion.div>
+          )}
+
+          {step === 3 && (
+            <motion.div
+              key="step3"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-6"
+            >
+              <div className="space-y-2">
+                <label className="text-sm font-semibold text-gray-400">Personality Traits (comma separated)</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Caring, Sarcastic, Highly Intelligent"
+                  onChange={(e) => handleArrayChange("personalityTraits", e.target.value)}
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3 outline-none focus:ring-2 focus:ring-pink-500 transition-all"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-semibold text-gray-400">Hobbies & Interests</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Reading, Hiking, Gaming"
+                  onChange={(e) => handleArrayChange("hobbies", e.target.value)}
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3 outline-none focus:ring-2 focus:ring-pink-500 transition-all"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-semibold text-gray-400">Background Story</label>
+                <textarea
+                  name="backgroundStory"
+                  value={character.backgroundStory}
+                  onChange={handleChange}
+                  rows={4}
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3 outline-none focus:ring-2 focus:ring-pink-500 transition-all resize-none"
+                />
+              </div>
+            </motion.div>
+          )}
+
+          {step === 4 && (
+            <motion.div
+              key="step4"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="flex flex-col items-center gap-8"
+            >
+              <div className="relative group">
+                <div className={`w-48 h-48 rounded-[2rem] overflow-hidden border-2 transition-all duration-500 ${character.profilePicture ? "border-pink-500 shadow-xl shadow-pink-500/20" : "border-white/10 bg-white/5"}`}>
+                  {character.profilePicture ? (
+                    <img src={character.profilePicture} alt="Avatar" className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-600">
+                      <FiUser size={64} opacity={0.3} />
+                    </div>
+                  )}
+                </div>
+                {isGeneratingImage && (
+                  <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center rounded-[2rem]">
+                    <div className="w-8 h-8 border-2 border-pink-500 border-t-transparent rounded-full animate-spin" />
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-col items-center gap-3 max-w-sm text-center">
+                <h3 className="text-xl font-bold">Generated Identity</h3>
+                <p className="text-sm text-gray-400">
+                  {character.profilePicture 
+                    ? "Your AI companion's appearance is ready. You can re-generate if you want a different look."
+                    : "Generate an AI avatar based on the attributes you've defined."}
+                </p>
+              </div>
+
+              <button
+                onClick={handleGenerateImage}
+                disabled={isGeneratingImage}
+                className={`flex items-center gap-2 px-8 py-4 rounded-2xl font-bold transition-all ${
+                  isGeneratingImage 
+                    ? "bg-gray-800 text-gray-500" 
+                    : "bg-white text-black hover:bg-gray-200"
+                }`}
+              >
+                <FiStar />
+                {isGeneratingImage ? "Generating Presence..." : character.profilePicture ? "Re-generate Avatar" : "Generate Avatar"}
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
-      {/* Ethnicity & Skin Tone */}
-      <div className="mb-4">
-        <label className="block font-semibold">Ethnicity:</label>
-        <select
-          name="ethnicity"
-          value={character.ethnicity}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        >
-          <option value="Anime">Anime</option>
-          <option value="Caucasian">Caucasian</option>
-          <option value="African">African</option>
-          <option value="Asian">Asian</option>
-          <option value="Hispanic">Hispanic</option>
-          <option value="Indian">Indian</option>
-          <option value="latina">latina</option>
-          <option value="Mixed">Mixed</option>
-        </select>
-      </div>
-
-      <div className="mb-4">
-        <label className="block font-semibold">Skin Tone:</label>
-        <select
-          name="skinTone"
-          value={character.skinTone}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        >
-          <option value="Fair">Fair</option>
-          <option value="Light">Light</option>
-          <option value="Tan">Tan</option>
-          <option value="Olive">Olive</option>
-          <option value="Dark">Dark</option>
-        </select>
-      </div>
-
-      {/* Hair & Eye Color */}
-      <div className="mb-4">
-        <label className="block font-semibold">Hair Color:</label>
-        <select
-          name="hairColor"
-          value={character.hairColor}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        >
-          <option value="Black">Black</option>
-          <option value="Brown">Brown</option>
-          <option value="Blonde">Blonde</option>
-          <option value="Red">Red</option>
-          <option value="Gray">Gray</option>
-          <option value="White">White</option>
-          <option value="Dyed">Dyed (e.g., blue, pink, purple)</option>
-        </select>
-      </div>
-
-      <div className="mb-4">
-        <label className="block font-semibold">Hair Style:</label>
-        <select
-          name="hairStyle"
-          value={character.hairStyle}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        >
-          <option value="Short and Straight">Short and Straight</option>
-          <option value="Long and Wavy">Long and Wavy</option>
-          <option value="Short and Wavy">Short and Wavy</option>
-          <option value="Long and Straight">Long and Straight</option>
-          <option value="Short and Curly">Short and Curly</option>
-          <option value="Long and Curly">Long and Curly</option>
-          <option value="Ponytail">Ponytail</option>
-          <option value="Bun">Bun</option>
-          <option value="Updo">Updo</option>
-          <option value="Curly">Curly</option>
-          <option value="Bald">Bald</option>
-          <option value="Mohawk">Mohawk</option>
-          <option value="Braided">Braided</option>
-        </select>
-      </div>
-
-      <div className="mb-4">
-        <label className="block font-semibold">Eye Color:</label>
-        <select
-          name="eyeColor"
-          value={character.eyeColor}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        >
-          <option value="Brown">Brown</option>
-          <option value="Blue">Blue</option>
-          <option value="Green">Green</option>
-          <option value="Hazel">Hazel</option>
-          <option value="Gray">Gray</option>
-          <option value="Amber">Amber</option>
-          <option value="Violet">Violet</option>
-        </select>
-      </div>
-
-      {/* Facial Features */}
-      <div className="mb-4">
-        <label className="block font-semibold">Facial Features:</label>
-        <label>
-          <input
-            type="checkbox"
-            name="freckles"
-            checked={character.facialFeatures.freckles}
-            onChange={handleFacialFeatureChange}
-          />{" "}
-          Freckles
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="dimples"
-            checked={character.facialFeatures.dimples}
-            onChange={handleFacialFeatureChange}
-          />{" "}
-          Dimples
-        </label>
-      </div>
-      
-      <div className="mb-4">
-        <label className="block font-semibold">Face Shape:</label>
-        <select
-          name="faceShape"
-          value={character.faceShape}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        >
-          <option value="Oval">Oval</option>
-          <option value="Round">Round</option>
-          <option value="Square">Square</option>
-          <option value="Heart">Heart</option>
-          <option value="Triangle">Triangle</option>
-        </select>
-      </div>
-
-      {/* Age */}
-      <div className="mb-4">
-        <label className="block text-sm font-semibold mb-1">Age</label>
-        <input
-          type="number"
-          name="age"
-          value={character.age}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        />
-      </div>
-
-      {/* Body Measurements */}
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-2">
-          Physical Attributes
-        </label>
-        <div className="grid grid-cols-2 gap-4">
-          {Object.entries(character.physicalAttributes).map(([key, value]) => (
-            <div key={key}>
-              <label className="block text-xs text-gray-400">{key}</label>
-              <input
-                type={key === "height" ? "number" : "text"}
-                value={value}
-                onChange={(e) =>
-                  handleNestedChange(
-                    "physicalAttributes",
-                    key,
-                    key === "height" ? parseInt(e.target.value) : e.target.value
-                  )
-                }
-                className=" border rounded p-2 w-full"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Personality Traits */}
-      <div className="mb-4">
-        <label className="block text-sm font-semibold mb-1">
-          Personality Traits
-        </label>
-        <input
-          type="text"
-          placeholder="Enter comma-separated traits"
-          onBlur={(e) => handleArrayChange("personalityTraits", e.target.value)}
-          className="w-full border rounded p-2"
-        />
-      </div>
-
-      {/* Hobbies */}
-      <div className="mb-4">
-        <label className="block text-sm font-semibold mb-1">Hobbies</label>
-        <input
-          type="text"
-          placeholder="Enter comma-separated hobbies"
-          onBlur={(e) => handleArrayChange("hobbies", e.target.value)}
-          className="w-full border rounded p-2"
-        />
-      </div>
-
-      {/* Favorite Things */}
-      <div className="mb-4">
-        <label className="block text-sm font-semibold mb-1">
-          Favorite Things
-        </label>
-        <input
-          type="text"
-          placeholder="Enter comma-separated favorite things"
-          onBlur={(e) => handleArrayChange("favoriteThings", e.target.value)}
-          className="w-full border rounded p-2"
-        />
-      </div>
-
-      {/* Style & Clothing */}
-      <div className="mb-4">
-        <label className="block font-semibold">Style:</label>
-        <select
-          name="style"
-          value={character.style}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        >
-          <option value="Casual">Casual</option>
-          <option value="Formal">Formal</option>
-          <option value="Streetwear">Streetwear</option>
-          <option value="Punk">Punk</option>
-          <option value="Modern and futuristic">Modern and futuristic</option>
-          <option value="Traditional Indian">Traditional Indian</option>
-          <option value="Traditional Chinese">Traditional Chinese</option>
-          <option value="Traditional Japanese">Traditional Japanese</option>
-          <option value="Vampiric">Vampiric</option>
-          <option value="Ninja">Ninja</option>
-          <option value="Gothic">Gothic</option>
-          <option value="Fantasy">Fantasy</option>
-        </select>
-      </div>
-
-      {/* relationship Type */}
-      <div className="mb-4">
-        <label className="block font-semibold">Assistant Role:</label>
-        <select
-          name="assistantRole"
-          value={character.assistantRole}
-          onChange={handleChange}
-          className="w-full border rounded p-2"
-        >
-          <option value="companion">Friendly Companion</option>
-          <option value="mentor">Mentor & Guide</option>
-          <option value="tutor">Learning Tutor</option>
-          <option value="consultant">Professional Consultant</option>
-          <option value="assistant">Personal Assistant</option>
-          <option value="counselor">Supportive Counselor</option>
-          <option value="coach">Life Coach</option>
-          <option value="researcher">Research Assistant</option>
-        </select>
-      </div>
-
-      {/* Profile Picture */}
-      <div className="mb-4">
-        <label className="block font-semibold">Profile Picture:</label>
-        {character.profilePicture ? (
-          <img
-            src={character.profilePicture}
-            alt="Profile"
-            className="w-32 h-32 rounded-lg"
-          />
-        ) : (
-          <p className="text-gray-500">No image generated.</p>
-        )}
+      {/* Navigation Buttons */}
+      <div className="mt-8 flex justify-between items-center">
         <button
-          onClick={handleGenerateImage}
-          disabled={isGeneratingImage}
-          className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg"
+          onClick={() => setStep(step - 1)}
+          disabled={step === 1}
+          className={`flex items-center gap-2 px-6 py-3 rounded-2xl font-bold transition-all ${
+            step === 1 ? "opacity-0 pointer-events-none" : "hover:bg-white/5"
+          }`}
         >
-          {isGeneratingImage ? "Generating..." : "Generate Image"}
+          <FiChevronLeft /> Back
         </button>
-      </div>
 
-      {/* Create Character Button */}
-      <button
-        onClick={handleSubmit}
-        disabled={!character.profilePicture || isSubmitting}
-        className="bg-green-500 text-white px-6 py-2 rounded-lg"
-      >
-        {isSubmitting ? "Creating..." : "Create Character"}
-      </button>
+        {step < 4 ? (
+          <button
+            onClick={() => setStep(step + 1)}
+            disabled={step === 1 && !character.name.trim()}
+            className="flex items-center gap-2 px-8 py-3 rounded-2xl bg-white text-black font-bold hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg"
+          >
+            Continue <FiChevronRight />
+          </button>
+        ) : (
+          <button
+            onClick={handleSubmit}
+            disabled={!character.profilePicture || isSubmitting}
+            className="flex items-center gap-2 px-10 py-4 font-bold rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 hover:scale-105 active:scale-95 disabled:opacity-50 transition-all shadow-xl shadow-pink-600/20"
+          >
+            <FiSave />
+            {isSubmitting ? "Bringing to life..." : "Create Companion"}
+          </button>
+        )}
+      </div>
     </div>
   );
 };
